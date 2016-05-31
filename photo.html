@@ -6,22 +6,22 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="main-nav">
-      <div class="page-header__logo">
-          <img src="img/logo.svg" width="75" height="22" alt="PINK">
-      </div>
-      <button class="main-nav__toggle"></button>
-      <div class="main-nav__wrapper">
+      <nav class="main-nav">
+        <div class="page-header__logo">
+            <img src="img/logo.svg" width="75" height="22" alt="PINK">
+        </div>
+        <button class="main-nav__toggle"></button>
+        <div class="main-nav__wrapper">
           <ul class="main-nav__list  main-nav__list--closed">
-          <li class="main-nav__item">Главная</li>
-          <li class="main-nav__item">Фотографии</li>
-          <li class="main-nav__item">Конкурс</li>
-          <li class="main-nav__item">HTML ACADEMY</li>
+            <li class="main-nav__item"><a href="">Главная</a></li>
+            <li class="main-nav__item"><a href="">Фотографии</a></li>
+            <li class="main-nav__item"><a href="">Конкурс</a></li>
+            <li class="main-nav__item"><a href="">HTML ACADEMY</a></li>
           </ul>
-      </div>
-      </div>
+        </div>
+      </nav>
     </header>
-    <section class="intro intro--photo-page">
+    <section class="intro">
       <h1>Фотографии пользователей</h1>
     </section>
     <section class="photos">
@@ -29,8 +29,7 @@
       <article class="photo photo--panorama">
         <a href="" class="photo-link"><img src="img/photo-1" alt=""></a>
         <div class="photo__wrapper">
-          <p class="photo__autor">Анна</p>
-          <span class="photo__timing">(5 минут назад)</span>
+          <p class="photo__autor">Анна<span class="photo__timing">(5 минут назад)</span></p>
           <p class="comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
           <div class="photo__like">
             <button class="photo__like-btn"></button>
@@ -41,8 +40,7 @@
       <article class="photo">
         <a href="" class="photo-link"><img src="img/photo-2" alt=""></a>
         <div class="photo__wrapper">
-          <p class="photo__autor">Левон</p>
-          <span class="photo__timing">(5 часов назад)</span>
+          <p class="photo__autor">Левон<span class="photo__timing">(5 часов назад)</span></p>
           <p class="comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
           <div class="photo__like">
             <button class="photo__like-btn"></button>
@@ -53,8 +51,7 @@
       <article class="photo">
         <a href="" class="photo-link"><img src="img/photo-3" alt=""></a>
         <div class="photo__wrapper">
-          <p class="photo__autor">Антон</p>
-          <span class="photo__timing">(12 часов назад)</span>
+          <p class="photo__autor">Антон<span class="photo__timing">(12 часов назад)</span></p>
           <p class="comment">Соседи будут рады!</p>
           <div class="photo__like">
             <button class="photo__like-btn"></button>
@@ -65,8 +62,7 @@
       <article class="photo">
         <a href="" class="photo-link"><img src="img/photo-4" alt=""></a>
         <div class="photo__wrapper">
-          <p class="photo__autor">Борис</p>
-          <span class="photo__timing">(20 часов назад)</span>
+          <p class="photo__autor">Борис<span class="photo__timing">(20 часов назад)</span></p>
           <p class="comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
           <div class="photo__like">
             <button class="photo__like-btn"></button>
@@ -77,8 +73,7 @@
       <article class="photo">
         <a href="" class="photo-link"><img src="img/photo-5" alt=""></a>
         <div class="photo__wrapper">
-          <p class="photo__autor">Сергей</p>
-          <span class="photo__timing">(25 часов назад)</span>
+          <p class="photo__autor">Сергей<span class="photo__timing">(25 часов назад)</span></p>
           <p class="comment">Самая кубанская в мире!</p>
           <div class="photo__like">
             <button class="photo__like-btn"></button>
@@ -89,8 +84,7 @@
       <article class="photo">
         <a href="" class="photo-link"><img src="img/photo-6" alt=""></a>
         <div class="photo__wrapper">
-          <p class="photo__autor">Максим</p>
-          <span class="photo__timing">(40 часов назад)</span>
+          <p class="photo__autor">Максим<span class="photo__timing">(40 часов назад)</span></p>
           <p class="comment">Где снег-то?</p>
           <div class="photo__like">
             <button class="photo__like-btn"></button>
@@ -101,8 +95,7 @@
       <article class="photo">
         <a href="" class="photo-link"><img src="img/photo-7" alt=""></a>
         <div class="photo__wrapper">
-          <p class="photo__autor">Надежда</p>
-          <span class="photo__timing">(45 часов назад)</span>
+          <p class="photo__autor">Надежда<span class="photo__timing">(45 часов назад)</span></p>
           <p class="comment">Всем GM и взаимные лайки!</p>
           <div class="photo__like">
             <button class="photo__like-btn"></button>
@@ -115,31 +108,35 @@
      </p>
     </section>
     <section class="editor">
-      <editor__preview></editor__preview>
-      <input type="radio" name="editor" class="editor-input" id="editor-1">
-      <input type="radio" name="editor" class="editor-input" id="editor-2">
-      <input type="radio" name="editor" class="editor-input" id="editor-3">
-      <div class="editor__toggles">
-        <label for="editor-1" class="editor__toggle"></label>
-        <label for="editor-2" class="editor__toggle"></label>
-        <label for="editor-3" class="editor__toggle"></label>
-      </div>
-      <div class="editor__tool editor__tool--crop">
-        <div class="editor__bar"></div>
-        <div class="editor toggler"></div>
-      </div>
-      <div class="editor__tool editor__tool--fill">
-        <div class="editor__bar"></div>
-        <div class="editor toggler"></div>
-      </div>
-      <div class="editor__tool editor__tool--contrast">
-        <div class="editor__bar"></div>
-        <div class="editor toggler"></div>
-      </div>
-      <div class="editor__upload">
-        <input type="submit" class="editor__btn editor__submit-btn" value="Запостить">
-        <input type="reset" class="editor__btn editor__reset-btn" value="Отмена">
-      </div>
+      <form action="" method="post" class="editor__form">
+        <editor__preview>
+          <img src="#" alt="Загруженное изображение">
+        </editor__preview>
+        <input type="radio" name="editor" class="editor-input" id="editor-1" checked>
+        <input type="radio" name="editor" class="editor-input" id="editor-2">
+        <input type="radio" name="editor" class="editor-input" id="editor-3">
+        <div class="editor__toggles">
+          <label for="editor-1" class="editor__toggle"></label>
+          <label for="editor-2" class="editor__toggle"></label>
+          <label for="editor-3" class="editor__toggle"></label>
+        </div>
+        <div class="editor__tool editor__tool--crop">
+          <div class="editor__bar"></div>
+          <div class="editor toggler"></div>
+        </div>
+        <div class="editor__tool editor__tool--fill">
+          <div class="editor__bar"></div>
+          <div class="editor toggler"></div>
+        </div>
+        <div class="editor__tool editor__tool--contrast">
+          <div class="editor__bar"></div>
+          <div class="editor toggler"></div>
+        </div>
+        <div class="editor__upload">
+          <input type="submit" class="editor__btn editor__submit-btn" value="Запостить">
+          <input type="reset" class="editor__btn editor__reset-btn" value="Отмена">
+        </div>
+      </form>
     </section>
     <footer class="page-footer">
         <div class="page-footer__wrapper">

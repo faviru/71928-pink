@@ -6,66 +6,66 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="main-nav">
+      <nav class="main-nav">
         <div class="page-header__logo">
           <img src="img/logo.svg" width="75" height="22" alt="PINK">
         </div>
         <button class="main-nav__toggle"></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list  main-nav__list--closed">
-            <li class="main-nav__item">Главная</li>
-            <li class="main-nav__item">Фотографии</li>
-            <li class="main-nav__item">Конкурс</li>
-            <li class="main-nav__item">HTML ACADEMY</li>
+            <li class="main-nav__item"><a href="">Главная</a></li>
+            <li class="main-nav__item"><a href="">Фотографии</a></li>
+            <li class="main-nav__item"><a href="">Конкурс</a></li>
+            <li class="main-nav__item"><a href="">HTML ACADEMY</a></li>
           </ul>
         </div>
-      </div>
+      </nav>
     </header>
     <form action="post" class="competition">
-      <section class="intro intro--form-page">
+      <section class="intro">
         <h1 class="competition__title">Конкурс на самое безбашеное путешествие с Пинк</h1>
       </section>
       <section class="competition__name-block">
         <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
         <ul class="competition__list">
           <li class="competition__item">
-            <h3 class="competition__item-title">Фамилия:</h3>
-            <input type="text" class="competition__family-name" placeholder="Укажите фамилию">
+            <label for="family_name" class="competition__item-title">Фамилия:</label>
+            <input type="text" id="family-name"class="competition__family-name" placeholder="Укажите фамилию">
           </li>
           <li class="competition__item">
-            <h3 class="competition__item-title">Имя:</h3>
-            <input type="text" class="competition__first-name" placeholder="Введите ваше имя">
+            <label for="first-name" class="competition__item-title">Имя:</label>
+            <input type="text" id="first-name"class="competition__first-name" placeholder="Введите ваше имя">
           </li>
           <li class="competition__item">
-            <h3 class="competition__item-title">Отчество:</h3>
-            <input type="text" class="competition__patronymic-name" placeholder="Ну и отчество тоже">
+            <label for="patronymic-name" class="competition__item-title">Отчество:</label>
+            <input type="text" id="patronymic-name"class="competition__patronymic-name" placeholder="Ну и отчество тоже">
           </li>
         </section>
         <section class="competition__achievements-block">
           <h2 class="competition__block-title">Ваши безбашенные достижения в путешествии</h2>
           <ul class="competition__list">
             <li class="competition__item">
-              <input type="checkbox" name="achievements" id="achievements-input-1" class="competition__item-input" checked>
+              <input type="checkbox" name="achievements-1" id="achievements-input-1" class="competition__item-input" checked>
               <label for="achievements-item-1">Сделал селфи с акулой</label>
             </li>
             <li class="competition__item">
-              <input type="checkbox" name="achievements" id="achievements-input-1" class="competition__item-input" checked>
+              <input type="checkbox" name="achievements-2" id="achievements-input-2" class="competition__item-input" checked>
               <label for="achievements-item-1">Обгорел на пляже</label>
             </li>
             <li class="competition__item">
-              <input type="checkbox" name="achievements" id="achievements-input-1" class="competition__item-input">
+              <input type="checkbox" name="achievements-3" id="achievements-input-3" class="competition__item-input">
               <label for="achievements-item-1">Видел Чака Норриса</label>
             </li>
             <li class="competition__item">
-              <input type="checkbox" name="achievements" id="achievements-input-1" class="competition__item-input">
+              <input type="checkbox" name="achievements-4" id="achievements-input-4" class="competition__item-input">
               <label for="achievements-item-1">Накупил сувениров</label>
             </li>
             <li class="competition__item">
-              <input type="checkbox" name="achievements" id="achievements-input-1" class="competition__item-input" checked>
+              <input type="checkbox" name="achievements-5" id="achievements-input-5" class="competition__item-input" checked>
               <label for="achievements-item-1">Удержал башню</label>
             </li>
             <li class="competition__item">
-              <input type="checkbox" name="achievements" id="achievements-input-1" class="competition__item-input">
+              <input type="checkbox" name="achievements-6" id="achievements-input-6" class="competition__item-input">
               <label for="achievements-item-1">Разгромил отель</label>
             </li>
           </ul>
@@ -87,15 +87,15 @@
           <ul class="competition__list">
             <li class="competition__item">
               <input type="radio" name="choosen-app" id="choosen-app-1" class="competition__item-input">
-              <label for="choosen-app-1*3">PINK для iOS</label>
+              <label for="choosen-app-1">PINK для iOS</label>
             </li>
             <li class="competition__item">
               <input type="radio" name="choosen-app" id="choosen-app-2" class="competition__item-input">
-              <label for="choosen-app-2*3">PINK на Android</label>
+              <label for="choosen-app-2">PINK на Android</label>
             </li>
             <li class="competition__item">
               <input type="radio" name="choosen-app" id="choosen-app-3" class="competition__item-input">
-              <label for="choosen-app-3*3">Windows Phone</label>
+              <label for="choosen-app-3">Windows Phone</label>
             </li>
           </ul>
         </section>
@@ -103,7 +103,7 @@
           <h2 class="competition__block-title"></h2>
           <input type="textarea" placeholder="Можно прям в красках, не стесняясь в выражениях" rows="5" class="competition__item-input">
           <input type="submit" class="competition__submit" value="Отправить форму">
-          <p class="competition__legend"><sup>*</sup — обязательные поля</p>
+          <p class="competition__legend"><sup>*</sup> — обязательные поля</p>
         </section>
         <div class="pop-up pop-up__falure">
           <h2 class="pop-up__title">Что-то пошло не так!</h2>
