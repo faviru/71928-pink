@@ -1,12 +1,176 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
+</head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+    <header class="page-header">
+      <nav class="main-nav">
+        <div class="page-header__logo">
+          <img src="img/logo.svg" width="75" height="22" alt="PINK">
+        </div>
+        <button class="main-nav__toggle"></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list  main-nav__list--closed">
+            <li class="main-nav__item"><a href="">Главная</a></li>
+            <li class="main-nav__item"><a href="">Фотографии</a></li>
+            <li class="main-nav__item"><a href="">Конкурс</a></li>
+            <li class="main-nav__item"><a href="">HTML ACADEMY</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="intro">
+      <img src="img/intro-iphone.svg" width="320" height="314" alt="">
+    </section>
+    <section class="app-download">
+      <a href="https://itunes.apple.com/ru/app/pink" class="app-download app-download__main"></a>
+      <div class="app-download__wrapper">
+        <a href="https://itunes.apple.com/ru/app/pink" class="app-download__apple"></a>
+        <a href="https://play.google.com/store/apps/pink" class="app-download__android"></a>
+        <a href="https://www.microsoft.com/ru-ru/store/apps/pink" class="app-download__microsoft"></a>
+        <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      </div>
+    </section>
+    <section class="advantages">
+      <div class="advantages__promo">
+        <p>Устали от серости мегаполиса?</p>
+        <p>Нам есть, что вам предложить!</p>
+      </div>
+      <div class="advantages__item">
+        <h3 class="advantages__item-title">Поднимает настроение</h3>
+        <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+      </div>
+      <div class="advantages__item">
+        <h3 class="advantages__item-title">Меняет мир вокруг</h3>
+        <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+      </div>
+      <div class="advantages__item">
+        <h3 class="advantages__item-title">Заводит новых друзей</h3>
+        <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+      </div>
+      <img src="img/promo.svg" width="158" height="320" alt="" class="advanges__promo-img">
+    </section>
+    <section class="reviews">
+      <div class="reviews__wrapper slider">
+        <input type="radio" name="reviews" id="reviews-input-1" class="slider__input" checked>
+        <input type="radio" name="reviews" id="reviews-input-2" class="slider__input">
+        <input type="radio" name="reviews" id="reviews-input-3" class="slider__input">
+        <ul class="reviews__list">
+          <li class="reviews__item slider__item slider__item--1">
+            <h3 class="review__author">Николай Петров</h3>
+            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </li>
+          <li class="reviews__item slider__item slider__item--2">
+            <h3 class="review__author"></h3>
+            <p></p>
+          </li>
+          <li class="reviews__item slider__item slider__item--3">
+            <h3 class="review__author"></h3>
+            <p></p>
+          </li>
+        </ul>
+        <div class="slider__toggles advantages__toggles">
+          <label for="reviews-input-1" class="slider__toggle">1</label>
+          <label for="reviews-input-2" class="slider__toggle">2</label>
+          <label for="reviews-input-3" class="slider__toggle">3</label>
+        </div>
+      </div>
+    </section>
+    <section class="version">
+      <div class="version__wrapper slider">
+        <input type="radio" name="version-input-1" class="slider-input">
+        <input type="radio" name="version-input-2" class="slider-input" checked>
+        <input type="radio" name="version-input-3" class="slider-input">
+        <ul class="version__list">
+          <li class="version__item slider__item">
+            <div class="version__title">
+              <h3 class="version__name"></h3>
+              <p></p>
+            </div>
+            <table class="version__contains">
+              <tr>
+                <td class="version__parameter">Розовый фильтер</td>
+                <td class="version__value"></td>
+              </tr>
+              <tr>
+                <td class="version__parameter">Смайлики</td>
+                <td class="version__value"></td>
+              </tr>
+              <tr>
+                <td class="version__parameter">Комментарии</td>
+                <td class="version__value"></td>
+              </tr>
+            </table>
+          </li>
+          <li class="version__item version__item--hit version__item--standart slider__item">
+            <div class="version__title">
+              <h3 class="version__name">Стандарт</h3>
+              <p>3,99 USD</p>
+            </div>
+            <table class="version__contains">
+              <tr>
+                <td class="version__parameter">Розовый фильтер</td>
+                <td class="version__value version__value--yes"></td>
+              </tr>
+              <tr>
+                <td class="version__parameter">Смайлики</td>
+                <td class="version__value version__value--yes"></td>
+              </tr>
+              <tr>
+                <td class="version__parameter">Комментарии</td>
+                <td class="version__value version__value--no"></td>
+              </tr>
+            </table>
+          </li>
+          <li class="version__item slider__item">
+            <div class="version__title">
+              <h3 class="version__name"></h3>
+              <p></p>
+            </div>
+            <table class="version__contains">
+              <tr>
+                <td class="version__parameter">Розовый фильтер</td>
+                <td class="version__value"></td>
+              </tr>
+              <tr>
+                <td class="version__parameter">Смайлики</td>
+                <td class="version__value"></td>
+              </tr>
+              <tr>
+                <td class="version__parameter">Комментарии</td>
+                <td class="version__value"></td>
+              </tr>
+            </table>
+          </li>
+        </ul>
+        <div class="slider__toggles version__toggles">
+          <label for="version-input-1" class="slider__toggle">1</label>
+          <label for="version-input-2" class="slider__toggle">2</label>
+          <label for="version-input-3" class="slider__toggle">3</label>
+        </div>
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="contacts__wrapper">
+        <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <h3 class="contacts__item-title">Звоните:</h3>
+            <p>+7 (812) 555-66-66</p>
+          </li>
+          <li class="contacts__item">
+            <h3 class="contacts__item-title">Пишите:</h3>
+            <p>mail@htmlacademy.ru</p>
+          </li>
+          <li class="contacts__item">
+            <h3 class="contacts__item-title">Приезжайте в гости:</h3>
+            <p>ул. Большая Конюшенная, 19/8</p>
+          </li>
+        </ul>
+      </div>
+      <div class="map-block" id="map-block"></div>
+    </section>
   </body>
 </html>
