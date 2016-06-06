@@ -1,0 +1,37 @@
+.main-nav {
+  width: 100%;
+
+  background: rgba(0, 0, 0, 0.3);
+
+  &__toggle {
+    @include btn-default;
+    margin-top: $header-vertical-margin;
+    margin-bottom: $header-vertical-margin;
+    margin-right: $page-margin-mobile;
+    width: 50px;
+    height: 24px;
+    background: url('../img/icon-menu-burger.svg') center no-repeat;
+  }
+
+  &__wrapper {
+    background-color: $dark-bg;
+  }
+
+  &__list {
+    @include list-default;
+  }
+
+  &__item a {
+    @include a-btn-default;
+    padding: 24px 0;
+    font-size: 18px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: $white-text-color;
+    background-color: $dark-bg;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid #000;
+  }
+}
+
+

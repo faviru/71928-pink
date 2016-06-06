@@ -1,0 +1,14 @@
+.page-header {
+  position: relative;
+
+  background: $dark-bg;
+
+  &__logo {
+    margin-left: $page-margin-mobile;
+    border-bottom: 1px solid #000;
+  }
+
+  img {
+    padding: $header-vertical-margin 0;
+  }
+}

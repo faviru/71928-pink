@@ -1,0 +1,74 @@
+@mixin container() {
+  width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@mixin list-default() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin btn-default() {
+  border: none;
+}
+
+@mixin a-btn-default() {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+@mixin typography($size, $height, $weight, $color){
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin pink-item-label() {
+    display: block;
+    margin: 15px 0 5px 0;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 30px;
+    color: $pink-text-color;
+}
+
+@mixin pink-block-title() {
+  @include typography(14px, 18px, 400, $pink-text-color);
+  padding: 40px 0;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@mixin item-label() {
+  @include typography(18px, 40px, 400, $dark-text-color);
+  display: inline-block;
+  position: relative;
+  padding-left: 60px;
+  margin: 20px 0;
+}
+
+@mixin item-label-before() {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 35px;
+  height: 35px;
+  border: 2px solid $border-color;
+  background-color: $lightest-bg;
+}
+
+@mixin green-btn() {
+    @include btn-default;
+    @include typography(18px, 30px, 700, $white-text-color);
+    margin: 10px 0;
+    padding: 20px 0;
+    width: 280px;
+    background-color: $green-color;
+    text-align: center;
+    text-transform: uppercase;
+}

@@ -1,0 +1,27 @@
+.reviews {
+  text-align: center;
+  background: $light-bg;
+  padding-bottom: 90px;
+
+  &__wrapper {
+    background: $lightest-bg;
+    padding: 20px;
+  }
+
+  &__list {
+    @include list-default;
+  }
+
+  &__item {
+    padding: 0 20px;
+
+    p{
+      @include typography(14px, 30px, 400, $dark-text-color);
+      margin: 20px 0;
+    }
+  }
+
+  &__author {
+    @include typography(18px, 30px, 700, $black-text-color);
+  }
+}

@@ -1,0 +1,28 @@
+.name-block {
+  padding: 50px 0 40px 0;
+
+  p {
+    @include typography(14px, 30px, 400, $dark-text-color);
+    margin: 0;
+    text-align: center;
+  }
+
+  &__wrapper {
+    margin: 0 20px;
+  }
+
+  &__list {
+    @include list-default;
+    margin-top: 50px;
+  }
+
+  &__item-title {
+    @include pink-item-label;
+  }
+
+  &__input {
+    @include typography(18px, 30px, 400, $dark-text-color);
+    width: 232px;
+    padding: 15px 24px;
+  }
+}

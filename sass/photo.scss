@@ -1,0 +1,53 @@
+.photo {
+  margin-top: 20px;
+
+  &__link {
+    display: block;
+    height: 180px;
+    margin: 0 20px;
+  }
+
+  &--panorama {
+    .photo__link {
+      margin: 0;
+    }
+  }
+
+  &__wrapper {
+    margin: 0 20px;
+    padding: 20px 15px;
+    background-color: $light-bg;
+  }
+
+  &__author {
+    @include typography(14px, 24px, 700, $dark-text-color);
+    margin: 0;
+  }
+
+  &__timing {
+    @include typography(12px, 24px, 300, $dark-text-color);
+    text-transform: uppercase;
+  }
+
+  &__comment {
+    @include typography(14px, 24px, 400, $dark-text-color);
+    margin: 5px 0 20px 0;
+  }
+
+  &__like-btn {
+    @include btn-default;
+    display: inline-block;
+    width: 13px;
+    height: 12px;
+    margin-right: 20px;
+    background-image: url('../img/icon-heart.svg');
+    background-repeat: no-repeat;
+  }
+
+  &__like-count {
+    @include typography(12px, 24px, 400, $pink-text-color);
+    display: inline-block;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
