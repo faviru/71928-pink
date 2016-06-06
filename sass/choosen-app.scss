@@ -1,0 +1,32 @@
+.choosen-app {
+  background-color: $light-bg;
+
+  &__wrapper {
+    margin: 0 20px;
+  }
+
+  &__title {
+    @include pink-block-title;
+    padding: 35px 0;
+  }
+
+  &__list {
+    @include list-default;
+    padding-bottom: 40px;
+  }
+
+  &__item {
+    label {
+      @include item-label;
+
+      &::before {
+        @include item-label-before;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+}

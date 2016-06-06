@@ -1,0 +1,36 @@
+.achievements-block{
+  background: $light-bg;
+
+  &__wrapper {
+    margin: 0 20px;
+  }
+
+  &__title {
+    @include pink-block-title;
+  }
+
+  &__list {
+    @include list-default;
+    padding-bottom: 50px;
+  }
+
+  &__item {
+    label {
+      @include item-label;
+
+      &::before {
+        @include item-label-before;
+      }
+    }
+
+    &:first-child {
+      label {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+}

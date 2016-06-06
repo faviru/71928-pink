@@ -1,0 +1,69 @@
+.editor {
+  background-color: $light-bg;
+
+  &__wrapper {
+    margin: 0 20px 20px 20px;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__toggles {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+  }
+  &__toggle {
+    display: inline-block;
+    margin-right: 30px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--crop {
+      width: 43px;
+      height: 44px;
+      background-image: url('../img/icon-editor-crop.svg');
+    }
+
+    &--fill {
+      width: 48px;
+      height: 48px;
+      background-image: url('../img/icon-editor-fill.svg');
+    }
+
+    &--contrast {
+      width: 35px;
+      height: 35px;
+      margin-right: 0;
+      background-image: url('../img/icon-editor-contrast.svg');
+    }
+  }
+
+  &__bar {
+    border-top: 2px solid $dark-text-color;
+    width: 240px;
+    margin: 20px;
+  }
+
+  &__upload-wrapper {
+    padding: 40px 20px;
+    border-top: 1px solid $border-color;
+  }
+
+  &__btn {
+    @include typography(18px, 18px, 700, $pink-text-color);
+    width: 280px;
+    padding: 15px 0;
+    text-align: center;
+    border: 3px solid $pink-text-color;
+    background-color: $light-bg;
+    border-radius: 35px;
+
+    &:first-child {
+      margin-bottom: 12px;
+    }
+  }
+}
