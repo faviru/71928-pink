@@ -1,37 +1,59 @@
-.main-nav {
-  width: 100%;
+.main-nav__toggle {
+  @include btn-default;
+  float: right;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: $page-margin-mobile;
+  width: 50px;
+  height: 24px;
+  background: url('../img/icon-menu-burger.svg') center no-repeat;
+}
 
-  background: rgba(0, 0, 0, 0.3);
+.main-nav__list {
+  @include list-default;
+}
 
-  &__toggle {
-    @include btn-default;
-    margin-top: $header-vertical-margin;
-    margin-bottom: $header-vertical-margin;
-    margin-right: $page-margin-mobile;
-    width: 50px;
-    height: 24px;
-    background: url('../img/icon-menu-burger.svg') center no-repeat;
-  }
+.main-nav__item a {
+  @include a-btn-default;
+  padding: 16px 0;
+  font-size: 18px;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: $white-text-color;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid #000;
+}
 
-  &__wrapper {
-    background-color: $dark-bg;
-  }
-
-  &__list {
-    @include list-default;
-  }
-
-  &__item a {
-    @include a-btn-default;
-    padding: 24px 0;
-    font-size: 18px;
-    line-height: 32px;
-    text-transform: uppercase;
-    color: $white-text-color;
-    background-color: $dark-bg;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    border-bottom: 1px solid #000;
+@media #{$tablet-widths} {
+  .main-nav__toggle {
+    margin-right: $page-margin-tablet;
+    margin-top: 40px;
   }
 }
 
+@media #{$desktop-widths} {
+  .main-nav {
+    display: inline-block;
+    float: right;
+  }
+
+  .main-nav__wrapper {
+    @include clearfix;
+    width: 780px;
+    margin: 22px $page-margin-desktop 0 0;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__item {
+    display: inline-block;
+    float: right;
+  }
+
+  .main-nav__item a {
+    border: none;
+  }
+}
 

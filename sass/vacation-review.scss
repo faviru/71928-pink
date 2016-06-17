@@ -1,18 +1,40 @@
 .vacation-review {
   background-color: $lightest-bg;
+}
 
-  &__wrapper {
-    margin: 0 20px;
-    padding-top: 40px;
+.vacation-review__wrapper {
+  @include container;
+  padding-top: 60px;
+  padding-bottom: 46px;
+}
+
+.vacation-review__input {
+  margin-top: 15px;
+  padding: 25px 20px;
+  width: 236px;
+}
+
+@media #{$tablet-widths} {
+  .vacation-review {
+    order: 4;
   }
 
-  &__title {
-    @include pink-block-title;
-    padding: 20px 0;
+  .vacation-review__input {
+    margin-top: 40px;
+    width: 456px;
+    height: 150px;
   }
-  &__input {
-    margin-bottom: 20px;
-    padding: 25px 20px;
-    width: 240px;
+}
+
+@media #{$desktop-widths} {
+  .vacation-review__wrapper {
+    width: 940px;
+    margin: 0 $page-margin-desktop;
+  }
+
+  .vacation-review__input {
+    margin-top: 40px;
+    width: 780px;
+    height: 75px;
   }
 }

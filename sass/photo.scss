@@ -1,53 +1,148 @@
 .photo {
   margin-top: 20px;
+  font-size: 0;
+}
 
-  &__link {
-    display: block;
-    height: 180px;
-    margin: 0 20px;
+.photo__link {
+  @include container;
+  display: block;
+}
+
+.photo--panorama {
+  .photo__link {
+    margin: 0;
   }
 
-  &--panorama {
-    .photo__link {
-      margin: 0;
+  img {
+    width: 320px;
+    height: 180px;
+  }
+}
+
+.photo__wrapper {
+  @include container;
+  padding: 20px 0;
+  background-color: $light-bg;
+}
+
+.photo__author {
+  @include typography(14px, 24px, 700, $dark-text-color);
+  padding: 0 15px;
+  margin: 0;
+}
+
+.photo__timing {
+  @include typography(12px, 24px, 300, $dark-text-color);
+  text-transform: uppercase;
+}
+
+.photo__comment {
+  @include typography(14px, 24px, 400, $dark-text-color);
+  padding: 0 15px;
+  margin: 5px 0 20px 0;
+}
+
+  .photo__like {
+    padding-left: 15px;
+  }
+
+.photo__like-btn {
+  @include btn-default;
+  display: inline-block;
+  width: 13px;
+  height: 12px;
+  margin-right: 20px;
+  background-image: url('../img/icon-heart.svg');
+  background-repeat: no-repeat;
+}
+
+.photo__like-count {
+  @include typography(12px, 24px, 400, $pink-text-color);
+  display: inline-block;
+  margin: 0;
+  padding-right: 20px;
+  text-transform: uppercase;
+}
+
+@media #{$tablet-widths} {
+  .photo {
+    width: 300px;
+  }
+
+  .photo__wrapper {
+    position: relative;
+    width: 300px;
+    height: 105px;
+  }
+
+  .photo__comment {
+    margin-bottom: 0;
+  }
+  .photo__like {
+    position: absolute;
+    bottom: 20px;
+  }
+  .photo__link {
+    img {
+      width: 300px;
+      height: 300px;
     }
   }
 
-  &__wrapper {
-    margin: 0 20px;
-    padding: 20px 15px;
-    background-color: $light-bg;
+  .photo--panorama {
+    width: auto;
+    margin-bottom: 30px;
+
+    img {
+      width: 700px;
+      height: 510px;
+    }
+
+    .photo__wrapper {
+      position: relative;
+      width: 620px;
+      margin: 0 $page-margin-tablet;
+    }
+
+    .photo__like {
+      position: absolute;
+      top: 20px;
+      right: 15px;;
+    }
+
+    .photo__like-btn {
+      float: right;
+    }
   }
 
-  &__author {
-    @include typography(14px, 24px, 700, $dark-text-color);
-    margin: 0;
+}
+
+@media #{$desktop-widths} {
+  .photo {
+  }
+  .photo__link {
+    img {
+      height: 400px;
+    }
   }
 
-  &__timing {
-    @include typography(12px, 24px, 300, $dark-text-color);
-    text-transform: uppercase;
-  }
+  .photo--panorama {
+    .photo__wrapper {
+      width: 940px;
+      padding: 20px 0;
+      height: 60px;
+      margin: 0 $page-margin-desktop;
+    }
 
-  &__comment {
-    @include typography(14px, 24px, 400, $dark-text-color);
-    margin: 5px 0 20px 0;
+    img {
+      width: 1200px;
+      height: 510px;
+    }
   }
-
-  &__like-btn {
-    @include btn-default;
-    display: inline-block;
-    width: 13px;
-    height: 12px;
-    margin-right: 20px;
-    background-image: url('../img/icon-heart.svg');
-    background-repeat: no-repeat;
+  .photo__like {
+    width: 300px;
   }
-
-  &__like-count {
-    @include typography(12px, 24px, 400, $pink-text-color);
-    display: inline-block;
-    margin: 0;
-    text-transform: uppercase;
+  .photo__like-btn {
+    float: right;
   }
 }

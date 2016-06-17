@@ -1,8 +1,36 @@
-.photos {
-  &__promo {
+.photos__promo {
     @include typography(14px, 30px, 400, $dark-text-color);
-    margin: 50px 20px;
+    margin: 0 $page-margin-mobile;
+    padding: 50px 0;
     text-align: center;
     background-color: $lightest-bg;
+  }
+
+@media #{$tablet-widths} {
+  .photos__promo {
+    margin: 0 $page-margin-tablet;
+    padding-top: 95px;
+    font-size: 18px;
+
+    &--bottom {
+      padding: 70px 0;
+    }
+  }
+
+  .photos__container {
+    @include container;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media #{$desktop-widths} {
+  .photos__promo {
+    margin: 0 300px;
+
+    &--bottom {
+      margin: 0 auto;
+    }
   }
 }

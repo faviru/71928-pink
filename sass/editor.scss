@@ -1,69 +1,119 @@
 .editor {
   background-color: $light-bg;
+}
 
-  &__wrapper {
-    margin: 0 20px 20px 20px;
+.editor__wrapper {
+  @include container;
+  padding: 20px 0;
+}
+
+.editor__input {
+  display: none;
+}
+
+.editor__toggles {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+
+}
+
+.editor__toggle {
+  display: inline-block;
+  margin-right: 30px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--crop {
+    width: 43px;
+    height: 44px;
+    background-image: url('../img/icon-editor-crop.svg');
   }
 
-  &__input {
-    display: none;
+  &--fill {
+    width: 48px;
+    height: 48px;
+    background-image: url('../img/icon-editor-fill.svg');
   }
 
-  &__toggles {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-
+  &--contrast {
+    width: 35px;
+    height: 35px;
+    margin-right: 0;
+    background-image: url('../img/icon-editor-contrast.svg');
   }
-  &__toggle {
-    display: inline-block;
-    margin-right: 30px;
-    vertical-align: middle;
-    background-repeat: no-repeat;
-    background-position: center;
+}
 
-    &--crop {
-      width: 43px;
-      height: 44px;
-      background-image: url('../img/icon-editor-crop.svg');
+.editor__bar {
+  border-top: 2px solid $dark-text-color;
+  width: 240px;
+  margin: 20px;
+}
+
+.editor__upload-wrapper {
+  padding: 40px 0;
+  border-top: 1px solid $border-color;
+}
+
+.editor__btn {
+  @include typography(18px, 18px, 700, $pink-text-color);
+  width: 280px;
+  padding: 15px 0;
+  text-align: center;
+  border: 3px solid $pink-text-color;
+  background-color: $light-bg;
+  border-radius: 35px;
+
+  &:first-child {
+    margin-bottom: 12px;
+  }
+}
+
+@media #{$tablet-widths} {
+  .editor__wrapper {
+    @include clearfix;
+    padding: 50px 0;
+  }
+  .editor__preview {
+    float: left;
+
+    img {
+      width: 300px;
+      heigth: 400px;
     }
-
-    &--fill {
-      width: 48px;
-      height: 48px;
-      background-image: url('../img/icon-editor-fill.svg');
-    }
-
-    &--contrast {
-      width: 35px;
-      height: 35px;
-      margin-right: 0;
-      background-image: url('../img/icon-editor-contrast.svg');
-    }
   }
 
-  &__bar {
-    border-top: 2px solid $dark-text-color;
-    width: 240px;
-    margin: 20px;
+  .editor__tools {
+    float: right;
+    width: 300px;
   }
 
-  &__upload-wrapper {
-    padding: 40px 20px;
-    border-top: 1px solid $border-color;
+  .editor__upload-wrapper{
+    padding: 0;
+    margin-top: 105px;
+    margin-right: 10px;
+  }
+  .editor__btn {
+    float: right;
+    width: 260px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .editor__tools {
+    width: 410px;
   }
 
-  &__btn {
-    @include typography(18px, 18px, 700, $pink-text-color);
-    width: 280px;
-    padding: 15px 0;
-    text-align: center;
-    border: 3px solid $pink-text-color;
-    background-color: $light-bg;
-    border-radius: 35px;
+  .editor__upload-wrapper{
+    margin-top: 160px;
+  }
 
-    &:first-child {
-      margin-bottom: 12px;
-    }
+  .editor__btn {
+    width: 180px;
+  }
+
+  .editor__submit-btn {
+    float: none;
   }
 }

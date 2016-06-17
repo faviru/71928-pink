@@ -1,55 +1,63 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body class="page">
-    <div class="page__wrapper">
-      <header class="page-header">
-        <div class="page-header__logo">
-          <img src="img/logo-pink-white-mobile.svg" width="75" height="24" alt="PINK">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="page">
+  <div class="page__wrapper">
+    <header class="page-header">
+      <div class="page-header__logo">
+        <img src="img/logo-pink-white-mobile.svg" width="75" height="24" alt="PINK">
         <button class="main-nav__toggle"></button>
+      </div>
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list  main-nav__list--closed">
+            <li class="main-nav__item"><a href="">Главная</a></li>
+            <li class="main-nav__item"><a href="">Фотографии</a></li>
+            <li class="main-nav__item"><a href="">Конкурс</a></li>
+            <li class="main-nav__item"><a href="">HTML ACADEMY</a></li>
+          </ul>
         </div>
-        <nav class="main-nav">
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list  main-nav__list--closed">
-              <li class="main-nav__item"><a href="">Главная</a></li>
-              <li class="main-nav__item"><a href="">Фотографии</a></li>
-              <li class="main-nav__item"><a href="">Конкурс</a></li>
-              <li class="main-nav__item"><a href="">HTML ACADEMY</a></li>
-            </ul>
+      </nav>
+    </header>
+    <form action="post" class="competition">
+      <section class="intro">
+        <h1 class="competition__title">Конкурс на самое безбашеное путешествие с Пинк</h1>
+      </section>
+      <div class="competition__container">
+          <div class="competition__description">
+            <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста,
+              заполните форму ниже:</p>
           </div>
-        </nav>
-      </header>
-      <form action="post" class="competition">
-        <section class="intro">
-          <h1 class="competition__title">Конкурс на самое безбашеное путешествие с Пинк</h1>
-        </section>
         <section class="name-block">
-          <div class="competition__wrapper">
-            <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+          <div class="name-block__wrapper">
             <ul class="name-block__list">
               <li class="name-block__item">
                 <label for="family_name" class="name-block__item-title">Фамилия:</label>
-                <input type="text" id="family-name"class="name-block__input" placeholder="Укажите фамилию">
+                <input type="text" id="family-name" class="name-block__input" placeholder="Укажите фамилию">
               </li>
               <li class="name-block__item">
                 <label for="first-name" class="name-block__item-title">Имя:</label>
-                <input type="text" id="first-name"class="name-block__input" placeholder="Введите ваше имя">
+                <input type="text" id="first-name" class="name-block__input" placeholder="Введите ваше имя">
               </li>
               <li class="name-block__item">
                 <label for="patronymic-name" class="name-block__item-title">Отчество:</label>
-                <input type="text" id="patronymic-name"class="name-block__input" placeholder="Ну и отчество тоже">
+                <input type="text" id="patronymic-name" class="name-block__input" placeholder="Ну и отчество тоже">
               </li>
-            </div>
-          </section>
-          <section class="achievements-block">
-            <div class="achievements-block__wrapper">
-              <h2 class="achievements-block__title">Ваши безбашенные достижения в путешествии</h2>
+          </div>
+        </section>
+
+        <section class="achievements-block">
+          <div class="achievements-block__wrapper">
+            <fieldset class="competition__fieldset">
+              <legend class="competition__legend">Ваши безбашенные достижения в путешествии</legend>
               <ul class="achievements-block__list">
                 <li class="achievements-block__item">
                   <input type="checkbox" name="achievements-1" id="achievements-input-1" class="achievements-block__input" checked>
@@ -76,25 +84,32 @@
                   <label for="achievements-item-1">Разгромил отель</label>
                 </li>
               </ul>
-            </div>
-          </section>
-          <section class="competitor-contacts">
-            <div class="competitor-contacts__wrapper">
+            </fieldset>
+          </div>
+        </section>
+
+        <section class="competitor-contacts">
+          <div class="competitor-contacts__wrapper">
+            <fieldset class="competition__fieldset">
+              <legend class="competition__legend">Контактная информация</legend>
               <ul class="competitor-contacts__list">
-                <li class="competitor-contacts__item">
+                <li class="competitor-contacts__item competitor-contacts__item--phone">
                   <label for="phone" class="competitor-contacts__item-title">Номерок телефончика</label>
                   <input type="tel" id="phone" name="telephone" placeholder="Номер, пожалуйста" class="competitor-contacts__input">
                 </li>
-                <li class="competitor-contacts__item">
+                <li class="competitor-contacts__item competitor-contacts__item--email">
                   <label for="email" class="competitor-contacts__item-title">Адресок почты</label>
                   <input type="email" name="email" placeholder="E-mail, пожалуйста" class="competitor-contacts__input">
                 </li>
               </ul>
-            </div>
-          </section>
-          <section class="choosen-app">
-            <div class="choosen-app__wrapper">
-              <h2 class="choosen-app__title">С каким приложением путешествовали?</h2>
+            </fieldset>
+          </div>
+        </section>
+
+        <section class="choosen-app">
+          <div class="choosen-app__wrapper">
+            <fieldset class="competition__fieldset">
+              <legend class="competition__legend">С каким приложением путешествовали?</legend>
               <ul class="choosen-app__list">
                 <li class="choosen-app__item">
                   <input type="radio" name="choosen-app" id="choosen-app-1" class="choosen-app__input">
@@ -109,51 +124,63 @@
                   <label for="choosen-app-3">Windows Phone</label>
                 </li>
               </ul>
-            </div>
-          </section>
-          <section class="vacation-review">
-            <div class="vacation-review__wrapper">
-              <h2 class="vacation-review__title">Опишите свои эмоции</h2>
+            </fieldset>
+          </div>
+        </section>
+
+        <section class="vacation-review">
+          <div class="vacation-review__wrapper">
+            <fieldset class="competition__fieldset">
+              <legend class="competition__legend">Опишите свои эмоции</legend>
               <textarea placeholder="Можно прям в красках, не стесняясь в выражениях" rows="5" class="vacation-review__input"></textarea>
-              <input type="submit" class="competition__submit" value="Отправить форму">
-              <p class="competition__legend"><sup>*</sup> — обязательные поля</p>
-            </div>
-          </section>
-          <div class="pop-up pop-up__falure">
-            <div class="pop-up__wrapper">
-              <h2 class="pop-up__title">Что-то пошло не так!</h2>
-              <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-            </div>
-            <div class="pop-up__btn-wrapper">
-              <button class="pop-up__close">Ок</button>
-            </div>
+            </fieldset>
           </div>
-          <div class="pop-up pop-up__acception">
-            <div class="pop-up__wrapper">
-              <h2 class="pop-up__title">Ваша заявка отправлена</h2>
-              <p>Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
-            </div>
-            <div class="pop-up__btn-wrapper">
-              <button class="pop-up__close">Закрыть окно</button>
-            </div>
+        </section>
+
+        <section class="competition__send-form">
+          <div class="competition__send-form-wrapper">
+            <input type="submit" class="competition__submit" value="Отправить форму">
+            <p class="competition__send-note"><sup>*</sup> — обязательные поля</p>
           </div>
-        </form>
-        <footer class="page-footer">
-          <div class="page-footer__wrapper">
-            <div class="page-footer__logo">
-              <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="PINK">
-            </div>
-            <div class="page-footer__socials">
-              <a href="" class="socials-link socials-link--tw"></a>
-              <a href="" class="socials-link socials-link--fb"></a>
-              <a href="" class="socials-link socials-link--yt"></a>
-            </div>
-            <div class="page-footer__copyright">
-              <p>Разработано</p>
-              <a href="" class="page-footer__copyright-link"></a>
-            </div>
-          </div>
-        </footer>
+        </section>
+
       </div>
-    </body>
-  </html>
+      <div class="pop-up pop-up__falure">
+        <div class="pop-up__wrapper">
+          <h2 class="pop-up__title">Что-то пошло не так!</h2>
+          <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        </div>
+        <div class="pop-up__btn-wrapper pop-up__btn-wrapper--falure">
+          <button class="pop-up__close">Ок</button>
+        </div>
+      </div>
+      <div class="pop-up pop-up__acception">
+        <div class="pop-up__wrapper">
+          <h2 class="pop-up__title">Ваша заявка отправлена</h2>
+          <p>Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+        </div>
+        <div class="pop-up__btn-wrapper pop-up__btn-wrapper--acception">
+          <button class="pop-up__close">Закрыть окно</button>
+        </div>
+      </div>
+    </form>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+          <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="PINK">
+        </div>
+        <div class="page-footer__socials">
+          <a href="" class="socials-link socials-link--tw"></a>
+          <a href="" class="socials-link socials-link--fb"></a>
+          <a href="" class="socials-link socials-link--yt"></a>
+        </div>
+        <div class="page-footer__copyright">
+          <p>Разработано</p>
+          <a href="" class="page-footer__copyright-link"></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
