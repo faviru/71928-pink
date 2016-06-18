@@ -2,58 +2,82 @@
   background: $darkest-bg;
   color: $white-text-color;
 
-  &__wrapper {
-    margin: 0 $page-margin-mobile;
-    padding: 28px 0;
-  }
-
-  &__main {
-    @include a-btn-default;
-    padding: 15px 0;
-    margin-bottom: 20px;
-
-    font-size: 18px;
-    line-height: 18px;
-    font-weight: 700;
-
-    border: 3px solid #fff;
-  }
-
-  &__app-container {
-    margin: 10px 0;
-
-    a {
-      display: inline-block;
-      margin: 0 15px;
-      width: 47px;
-      height: 56px;
-      background-repeat: no-repeat;
-
-      &:first-child {
-        margin-left: 26px;
-      }
-    }
-  }
-
-  &__apple {
-    background-image: url('../img/logo-apple.svg');
-    background-position: bottom;
-  }
-
-  &__android {
-    background-image: url('../img/logo-android.svg');
-    background-position: bottom;
-  }
-
-  &__microsoft {
-    background-image: url('../img/logo-microsoft.svg');
-    background-position: center;
-  }
-
   p {
     @include typography(14px, 24px, 300, $white-text-color);
     margin-top: 15px;
     margin-bottom: 0;
     text-align: center;
+  }
+}
+
+.app-download__wrapper {
+  margin: 0 $page-margin-mobile;
+  padding: 28px 0;
+}
+
+.app-download__main {
+  @include a-btn-default;
+  padding: 15px 0;
+  margin-bottom: 20px;
+
+  color: $white-text-color;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+
+  border: 3px solid #fff;
+}
+
+.app-download__app-container {
+  margin: 10px 0;
+
+  a {
+    display: inline-block;
+    margin: 0 15px;
+    width: 47px;
+    height: 56px;
+    background-repeat: no-repeat;
+
+    &:first-child {
+      margin-left: 26px;
+    }
+  }
+}
+
+.app-download__apple {
+  background-image: url('../img/logo-apple.svg');
+  background-position: bottom;
+}
+
+.app-download__android {
+  background-image: url('../img/logo-android.svg');
+  background-position: bottom;
+}
+
+.app-download__microsoft {
+  background-image: url('../img/logo-microsoft.svg');
+  background-position: center;
+}
+
+@media #{$tablet-widths} {
+  .app-download {
+    position: absolute;
+    width: 300px + $page-margin-tablet;
+    bottom: 65px;
+    background: transparent;
+  }
+  .app-download__wrapper {
+    padding: 0;
+    margin: 0 0 0 $page-margin-tablet;
+  }
+}
+
+@media #{$desktop-widths} {
+  .app-download {
+    width: 300px + $page-margin-desktop;
+    bottom: 125px;
+  }
+  .app-download__wrapper {
+    margin-left: $page-margin-desktop;
   }
 }

@@ -1,32 +1,55 @@
 .choosen-app {
   background-color: $light-bg;
+}
 
-  &__wrapper {
-    margin: 0 20px;
-  }
+.choosen-app__wrapper {
+  @include container;
+  padding: 40px 0;
+}
 
-  &__title {
-    @include pink-block-title;
-    padding: 35px 0;
-  }
+.choosen-app__title {
+  @include pink-block-title;
+}
 
-  &__list {
-    @include list-default;
-    padding-bottom: 40px;
-  }
+.choosen-app__list {
+  @include list-default;
+}
 
-  &__item {
-    label {
-      @include item-label;
+.choosen-app__item {
+  label {
+    @include item-label;
+    margin:35px 0 0 0;
 
-      &::before {
-        @include item-label-before;
-        border-radius: 50%;
-      }
+    &::before {
+      @include item-label-before;
+      border-radius: 50%;
     }
   }
+}
 
-  &__input {
+.choosen-app__input {
+  display: none;
+}
+
+@media #{$tablet-widths} {
+  .choosen-app {
+    order: 1;
+    background: $lightest-bg;
+  }
+
+  .choosen-app__wrapper {
+    padding: 30px 0;
+  }
+
+  .choosen-app__title {
     display: none;
+  }
+}
+
+@media #{$desktop-widths} {
+  .choosen-app__wrapper {
+    width: 450px;
+    padding: 0;
+    margin-right: $page-margin-desktop;
   }
 }

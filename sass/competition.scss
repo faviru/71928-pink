@@ -1,30 +1,105 @@
-.competition {
-  font-family: "Open Sans", "Arial", sans-serif;
+.competition__title {
+  @include typography(24px, 30px, 300, $white-text-color);
+  @include container;
+  padding: 95px 0 55px 0;
+  text-align: center;
+}
 
-  &__title {
-    @include typography(24px, 30px, 300, $white-text-color);
+.competition__description {
+  @include container;
+  padding: 50px 0;
+
+  p {
+    @include typography(14px, 30px, 400, $dark-text-color);
     margin: 0;
-    padding: 100px 20px 55px;
     text-align: center;
   }
+}
 
-  &__wrapper {
-    margin: 0 20px;
+.competition__fieldset{
+  border: none;
+  padding: 0;
+}
+
+.competition__legend {
+  @include typography(14px, 30px, 400, $pink-text-color);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.competition__send-form-wrapper {
+  @include container;
+  padding-bottom: 50px;
+}
+
+.competition__submit {
+  @include green-btn;
+  margin: 0;
+}
+
+.competition__send-note {
+  margin: 30px 0 25px 0;
+  font-size: 14px;
+  line-height: 30px;
+  color: $dark-text-color;
+  text-align: center;
+
+  sup {
+    color: $pink-text-color;
+  }
+}
+
+@media #{$tablet-widths} {
+  .competition__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
-  &__submit {
-    @include green-btn;
-  }
+  .competition__description {
+    padding: 90px 0 70px 0;
 
-  &__legend {
-    margin: 30px 0 25px 0;
-    font-size: 14px;
-    line-height: 30px;
-    color: $dark-text-color;
-    text-align: center;
-
-    sup {
-      color: $pink-text-color;
+    p {
+      font-size: 18px;
+      padding: 0 60px;
     }
+  }
+  .competition__send-form-wrapper {
+    @include clearfix;
+  }
+
+  .competition__title {
+    padding: 185px 0 80px 0;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .competition__fieldset {
+    display: block;
+    border: 2px solid $border-color;
+    padding: 0 60px 50px 60px;
+  }
+
+  .competition__send-form {
+    order: 5;
+  }
+  .competition__submit {
+    float: left;
+  }
+  .competition__send-note {
+    display: inline-block;
+    float: right;
+    margin: 0;
+    padding: 20px 0;
+  }
+}
+
+@media #{$desktop-widths} {
+  .competition__container {
+    justify-content: space-between;
+  }
+
+  .competition__send-form-wrapper{
+    margin: 0 $page-margin-desktop;
   }
 }

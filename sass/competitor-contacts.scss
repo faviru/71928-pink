@@ -1,24 +1,93 @@
 .competitor-contacts {
   background: $lightest-bg;
 
-  &__wrapper {
-    margin: 0 20px;
+  legend {
+    display: none;
+  }
+}
+
+.competitor-contacts__wrapper {
+  @include container;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.competitor-contacts__list {
+  @include list-default;
+}
+
+.competitor-contacts__item-title {
+  @include pink-item-label;
+}
+
+.competitor-contacts__input {
+  @include typography(18px, 30px, 400, $dark-text-color);
+  padding: 15px 24px;
+  width: 232px;
+}
+
+@media #{$tablet-widths} {
+  .competitor-contacts {
+    order: 2;
+
+    legend {
+      display: block;
+    }
+    fieldset {
+      padding-bottom: 0;
+    }
   }
 
-  &__list {
-    @include list-default;
+  .competitor-contacts__wrapper {
+    padding: 30px 0;
+  }
+
+  .competitor-contacts__list {
     margin-top: 40px;
-    margin-bottom: 50px;
   }
 
-  &__item-title {
-    @include pink-item-label;
-    font-weight: 400;
+  .competitor-contacts__item {
+    position: relative;
+
+    &::before {
+      @include pink-item-label;
+      position: absolute;
+      content:'';
+      bottom: 20px;
+    }
+
+    &--phone::before {
+      content:'Номер телефона';
+    }
+
+    &--email::before {
+      content:'Адрес почты';
+    }
+  }
+  .competitor-contacts__input {
+    width: 446px;
+    margin-bottom: 70px;
   }
 
-  &__input {
-    @include typography(18px, 30px, 400, $dark-text-color);
-    padding: 15px 24px;
-    width: 232px;
+  .competitor-contacts__item-title {
+    display: none;
+  }
+}
+
+
+@media #{$desktop-widths} {
+  .competitor-contacts__wrapper {
+    width: 940px;
+    margin: 0 $page-margin-desktop;
+  }
+  .competitor-contacts__item {
+    display: inline-block;
+
+    &:last-of-type {
+      float: right;
+    }
+  }
+  .competitor-contacts__input {
+    width: 320px;
   }
 }

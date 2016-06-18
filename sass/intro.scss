@@ -1,14 +1,69 @@
 .intro {
-    background: url('../img/bg-back-mobile@1x.jpg') center no-repeat;
+  position: relative;
+  background: url('../img/bg-back-mobile@1x.jpg') center no-repeat;
+  background-size: cover;
+  z-index: -1;
 
   img {
-    padding-top: 175px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 
-  h1 {
-    @include typography(24px, 30px, 300, $white-text-color);
-    padding: 95px 0 85px 0;
-    margin: 0;
-    text-align: center;
+  &--photo {
+    h1{
+      @include typography(24px, 30px, 300, $white-text-color);
+      @include container;
+      padding: 100px 0 90px 0;
+      text-align: center;
+    }
+  }
+}
+
+.intro__img {
+  position: relative;
+  height: 460px;
+}
+
+@media #{$tablet-widths} {
+  .intro {
+    img {
+      left: 190px;
+      width: 470px;
+      height: 544px;
+    }
+
+    &--photo {
+      h1{
+        padding: 180px 0 140px 0;
+        font-size: 50px;
+        line-height: 60px;
+      }
+    }
+  }
+
+  .intro__img {
+    height: 730px;
+  }
+}
+
+
+@media #{$desktop-widths} {
+  .intro {
+    img {
+      left: 475px;
+      width: 566px;
+      height: 644px;
+    }
+
+    &--photo {
+      h1{
+        padding-bottom: 110px;
+      }
+    }
+  }
+
+  .intro__img {
+    height: 855px;
   }
 }

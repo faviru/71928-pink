@@ -28,12 +28,11 @@
 }
 
 @mixin pink-item-label() {
-    display: block;
-    margin: 15px 0 5px 0;
-    padding-left: 20px;
-    font-size: 14px;
-    line-height: 30px;
-    color: $pink-text-color;
+  @include typography(14px, 30px, 400, $pink-text-color);
+  display: block;
+  margin: 15px 0 5px 0;
+  padding-left: 20px;
+  text-transform: uppercase;
 }
 
 @mixin pink-block-title() {
@@ -49,7 +48,6 @@
   display: inline-block;
   position: relative;
   padding-left: 60px;
-  margin: 20px 0;
 }
 
 @mixin item-label-before() {
@@ -65,10 +63,38 @@
 @mixin green-btn() {
     @include btn-default;
     @include typography(18px, 30px, 700, $white-text-color);
-    margin: 10px 0;
+    margin: 0;
     padding: 20px 0;
     width: 280px;
     background-color: $green-color;
     text-align: center;
     text-transform: uppercase;
 }
+
+
+@mixin container() {
+  width: 280px;
+  margin: 0 auto;
+
+  @media #{$tablet-widths} {
+    width: 620px;
+  }
+
+  @media #{$desktop-widths} {
+    width: 940px;
+  }
+}
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
+}
+
+.grid {
+  outline: 2px solid red;
+}
+

@@ -1,65 +1,149 @@
 .version {
+  background: $light-bg;
+}
 
-  &__list {
-    @include list-default;
+.version__wrapper {
+  position: relative;
+  height: 280px;
+  padding: 90px 0 100px 0;
+  overflow: hidden;
+}
+
+.version__list {
+  @include list-default;
+  position: absolute;
+  left:-540px;
+
+  th,
+  td {
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color;
   }
 
-  &__item {
-    margin: 0 20px;
-    display: none;
-    line-height: 30px;
-    text-transform: uppercase;
+  td {
+    border-bottom: 2px solid $border-color;
     background: $lightest-bg;
-    color: $dark-text-color;
+  }
+}
 
-    &--standart {
-      display: block;
-    }
+.version__cell {
+  width: 280px;
+  vertical-align: bottom;
+}
+
+.version__title {
+  padding: 19px 0;
+  background: $dark-bg;
+  text-align: center;
+
+  p {
+    @include typography(24px, 30px, 300, $white-text-color);
+    margin: 0;
+  }
+}
+
+.version__name {
+  @include typography(18px, 30px, 700, $white-text-color);
+  margin: 0;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.version__parameter {
+  float: left;
+  margin: 0;
+  padding: 20px 0 20px 25px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.version__value {
+  float: right;
+  padding: 16px 20px;
+  width: 27px;
+  height: 27px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--yes {
+    background-image: url('../img/icon-yes.svg');
   }
 
-  &__title {
-    padding: 25px 0;
-    background: $dark-bg;
-    text-align: center;
-    color: $white-text-color;
+  &--no {
+    background-image: url('../img/icon-no.svg');
+  }
+}
+
+.version__toggles {
+  background: $light-bg;
+  padding-top: 40px;
+}
+
+@media #{$tablet-widths} {
+  .version__wrapper {
+    margin: 0 $page-margin-tablet;
+  }
+
+  .version__list {
+    position: static;
+  }
+
+  .version__title {
+    padding: 10px 0;
 
     p {
-    margin: 0;
-    font-size: 24px;
-    font-weight: 300;}
+      font-size: 18px;
+    }
   }
 
-  &__name {
-    margin: 0;
-    margin-bottom: 5px;
+  .version__name {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .version__cell {
+    width: 152px;
+  }
+
+  .version__parameter {
+    display: none;
+
+    &--main {
+      @include typography(14px, 30px, 400, $dark-text-color);
+      display: block;
+      padding-left: 15px;
+    }
+  }
+
+  .version__value {
+    float: none;
+    margin: 0 auto;
+  }
+}
+
+
+@media #{$desktop-widths} {
+  .version__wrapper {
+    margin: 0 $page-margin-desktop;
+    padding-top: 150px;
+  }
+
+  .version__cell {
+    width: 233px;
+  }
+
+  .version__title {
+    padding: 20px 0;
+
+    p {
+      font-size: 24px;
+    }
+  }
+
+  .version__name {
     font-size: 18px;
-    font-weight: 700;
   }
-
-  &__parameter {
-    padding: 24px 20px;
-    font-size: 14px;
-    font-weight: 400;
-  }
-
-  &__value {
-    padding: 16px 20px;
-    width: 27px;
-    height: 27px;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    &--yes {
-      background-image: url('../img/icon-yes.svg');
-    }
-
-    &--no {
-      background-image: url('../img/icon-no.svg');
-    }
-  }
-
-  &__toggles {
-    background: $light-bg;
-    padding: 40px 0;
+  .version__parameter--main {
+    font-size: 18px;
   }
 }
