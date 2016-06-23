@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name= viewport content= width=device-width initial-scale=1>
   <title>HTML Academy: Пинк</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link href="css/normalize.css" rel="stylesheet">
@@ -12,19 +13,17 @@
 <body class="page">
   <div class="page__wrapper">
     <header class="page-header">
-      <div class="page-header__logo">
+      <div class="page-header__logo main__nav main-nav--closed">
         <img src="img/logo-pink-white-mobile.svg" width="75" height="24" alt="PINK">
         <button class="main-nav__toggle"></button>
       </div>
-      <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list  main-nav__list--closed">
-            <li class="main-nav__item"><a href="">Главная</a></li>
-            <li class="main-nav__item"><a href="">Фотографии</a></li>
-            <li class="main-nav__item"><a href="">Конкурс</a></li>
-            <li class="main-nav__item"><a href="">HTML ACADEMY</a></li>
-          </ul>
-        </div>
+      <nav class="main-nav__block">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a>Главная</a></li>
+          <li class="main-nav__item"><a href="http://localhost:3000/photo.html">Фотографии</a></li>
+          <li class="main-nav__item"><a href="http://localhost:3000/form.html">Конкурс</a></li>
+          <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML ACADEMY</a></li>
+        </ul>
       </nav>
     </header>
     <section class="intro">
@@ -131,9 +130,7 @@
         <input type="radio" name="version-input-3" class="slider__input">
         <table class="version__list">
           <tr>
-            <th class="version__title version__title--empty">
-              <h3 class="version__name"></h3>
-            </th>
+            <th class="version__title"></th>
             <th class="version__title">
               <h3 class="version__name">База</h3>
               <p>1,99 USD</p>
@@ -149,7 +146,7 @@
           </tr>
           <tr>
             <td>
-              <div class="version__cell version__cell">
+              <div class="version__cell">
                 <p class="version__parameter--main">Розовый фильтер</p>
               </div>
             </td>
@@ -228,7 +225,7 @@
         </div>
     </section>
     <section class="contacts">
-      <div class="contacts__wrapper grid">
+      <div class="contacts__wrapper">
         <h2 class="contacts__title">Остались вопросы?<br> Свяжитесь с нами!</h2>
         <div class="contacts-list">
           <div class="contacts__item">
@@ -247,17 +244,17 @@
       </div>
       <div class="map-block" id="map-block"></div>
     </section>
-    <footer class="page-footer page-footer--index grid">
+    <footer class="page-footer page-footer--index">
       <div class="page-footer__wrapper">
-        <div class="page-footer__logo grid">
+        <div class="page-footer__logo">
           <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="PINK">
         </div>
-        <div class="page-footer__socials grid">
+        <div class="page-footer__socials">
           <a href="" class="socials-link socials-link--tw"></a>
           <a href="" class="socials-link socials-link--fb"></a>
           <a href="" class="socials-link socials-link--yt"></a>
         </div>
-        <div class="page-footer__copyright grid">
+        <div class="page-footer__copyright">
           <p>Разработано</p>
           <a href="" class="page-footer__copyright-link"></a>
         </div>

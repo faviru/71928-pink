@@ -16,12 +16,10 @@
 
   th,
   td {
-    border-left: 1px solid $border-color;
-    border-right: 1px solid $border-color;
+    border: 1px solid $border-color;
   }
 
   td {
-    border-bottom: 2px solid $border-color;
     background: $lightest-bg;
   }
 }
@@ -40,6 +38,11 @@
     @include typography(24px, 30px, 300, $white-text-color);
     margin: 0;
   }
+}
+
+.version__title:empty {
+  background: $light-bg;
+  border: none;
 }
 
 .version__name {

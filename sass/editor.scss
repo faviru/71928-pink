@@ -3,19 +3,26 @@
 }
 
 .editor__wrapper {
-  @include container;
-  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0 0 0;
 }
 
 .editor__input {
   display: none;
 }
 
+.editor__preview {
+  display: block;
+  margin: 0 $page-margin-mobile;
+}
+
 .editor__toggles {
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 40px;
   margin-bottom: 20px;
-
 }
 
 .editor__toggle {
@@ -24,6 +31,7 @@
   vertical-align: middle;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 
   &--crop {
     width: 43px;
@@ -45,15 +53,48 @@
   }
 }
 
+.editor__tools {
+  margin: 0 $page-margin-mobile;
+}
+
 .editor__bar {
-  border-top: 2px solid $dark-text-color;
+  display: none;
+  position: relative;
+  order: 1;
+  height: 2px;
+  background-color: $dark-text-color;
   width: 240px;
   margin: 20px;
 }
 
-.editor__upload-wrapper {
-  padding: 40px 0;
+.editor__toggler {
+  position: absolute;
+  content: '';
+  top: -6px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  background-color: $lightest-bg;
+  border: 2px solid $border-color-active;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:active {
+    background-color: $pink-bg;
+  }
+}
+
+.editor__upload {
+  width: 320px;
   border-top: 1px solid $border-color;
+}
+
+.editor__upload-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+  margin: 0 $page-margin-mobile;
+  padding: 40px 0;
 }
 
 .editor__btn {
@@ -61,59 +102,172 @@
   width: 280px;
   padding: 15px 0;
   text-align: center;
-  border: 3px solid $pink-text-color;
   background-color: $light-bg;
   border-radius: 35px;
 
-  &:first-child {
-    margin-bottom: 12px;
+  &:focus {
+    outline: none;
   }
+}
+
+.editor__submit-btn {
+  border: 3px solid $pink-text-color;
+
+  &:hover {
+    color: $white-text-color;
+    background-color: $pink-bg;
+  }
+
+  &:active {
+    color: #e06989;
+  }
+}
+
+.editor__reset-btn {
+  color: #dddfe0;
+  border: 3px solid #dddfe0;
+
+  &:hover {
+    color: #b5b9be;
+    border-color: #b5b9be;
+  }
+
+  &:active {
+    color: #cbced2;
+    background-color: #b5b9be;
+    border-color: #b5b9be;
+  }
+}
+
+.editor__submit-btn {
+  margin-bottom: 12px;
+}
+
+input[id="editor-1"]:checked ~ .editor__toggles .editor__bar--crop {
+  display: block;
+}
+
+input[id="editor-2"]:checked ~ .editor__toggles .editor__bar--fill {
+  display: block;
+}
+
+input[id="editor-3"]:checked ~ .editor__toggles .editor__bar--contrast {
+  display: block;
 }
 
 @media #{$tablet-widths} {
   .editor__wrapper {
-    @include clearfix;
-    padding: 50px 0;
+    flex-direction: column;
+    align-content: space-between;
+    height: 400px;
+    padding: 55px $page-margin-tablet;
   }
-  .editor__preview {
-    float: left;
 
-    img {
-      width: 300px;
-      heigth: 400px;
-    }
+  .editor__preview {
+    width: 300px;
+    margin: 0;
+  }
+
+  .editor__preview img {
+    width: 300px;
+    heigth: 400px;
   }
 
   .editor__tools {
-    float: right;
-    width: 300px;
+    width: 275px;
+    height: 220px;
+    margin: 0;
   }
 
-  .editor__upload-wrapper{
-    padding: 0;
-    margin-top: 105px;
-    margin-right: 10px;
+  .editor__toggles {
+    justify-content: space-between;
+    margin: 0;
+    margin-top: -15px;
   }
+
+  .editor__toggle {
+    width: 24px;
+    height: 24px;
+    margin: 24px 0 25px 0;
+  }
+
+  .editor__bar {
+    display: block;
+    position: relative;
+    order: initial;
+    width: 202px;
+    margin: 35px 18px 36px 18px;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 35px;
+      right: -18px;
+      height: 1px;
+      width: 275px;
+      background-color: $border-color;
+    }
+  }
+
+  .editor__upload {
+    width: 275px;
+    margin-top: auto;
+    border: none;
+  }
+  .editor__upload-wrapper{
+    margin: 0;
+    padding: 0;
+  }
+
   .editor__btn {
-    float: right;
     width: 260px;
   }
 }
 
 @media #{$desktop-widths} {
+  .editor{
+    width: 940px;
+    margin: 0 $page-margin-desktop;
+  }
+
+  .editor__wrapper {
+    padding-left: 80px;
+    padding-right: 60px;
+  }
+
   .editor__tools {
+    width: 410px;
+    height: 230px;
+  }
+
+  .editor__toggle {
+    width: 38px;
+    height: 38px;
+    margin: 17px 0;
+  }
+
+  .editor__bar {
+    width: 288px;
+    margin: 36px 30px 37px 20px;
+
+    &::after {
+      width: 410px;
+      rigth: -30px;
+    }
+  }
+
+  .editor__upload {
     width: 410px;
   }
 
-  .editor__upload-wrapper{
-    margin-top: 160px;
+  .editor__upload-wrapper {
+    width: 410px;
+    justify-content: space-between;
   }
 
   .editor__btn {
     width: 180px;
-  }
-
-  .editor__submit-btn {
-    float: none;
+    margin: 0;
+    flex-grow: 0;
   }
 }

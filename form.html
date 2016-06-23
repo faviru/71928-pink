@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name= viewport content= width=device-width initial-scale=1>
   <title>HTML Academy: Пинк</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link href="css/normalize.css" rel="stylesheet">
@@ -12,19 +13,17 @@
 <body class="page">
   <div class="page__wrapper">
     <header class="page-header">
-      <div class="page-header__logo">
+      <div class="page-header__logo main__nav main-nav--closed">
         <img src="img/logo-pink-white-mobile.svg" width="75" height="24" alt="PINK">
         <button class="main-nav__toggle"></button>
       </div>
-      <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list  main-nav__list--closed">
-            <li class="main-nav__item"><a href="">Главная</a></li>
-            <li class="main-nav__item"><a href="">Фотографии</a></li>
-            <li class="main-nav__item"><a href="">Конкурс</a></li>
-            <li class="main-nav__item"><a href="">HTML ACADEMY</a></li>
-          </ul>
-        </div>
+      <nav class="main-nav__block">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="http://localhost:3000/">Главная</a></li>
+          <li class="main-nav__item"><a href="http://localhost:3000/photo.html">Фотографии</a></li>
+          <li class="main-nav__item"><a>Конкурс</a></li>
+          <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML ACADEMY</a></li>
+        </ul>
       </nav>
     </header>
     <form action="post" class="competition">

@@ -1,3 +1,14 @@
+.main-nav {
+  border-bottom: 1px solid #000;
+
+  &--closed {
+    position: absolute;
+    width: 320px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: none;
+  }
+}
+
 .main-nav__toggle {
   @include btn-default;
   float: right;
@@ -6,11 +17,24 @@
   margin-right: $page-margin-mobile;
   width: 50px;
   height: 24px;
-  background: url('../img/icon-menu-burger.svg') center no-repeat;
+  background-color: $dark-bg;
+  background: url('../img/icon-menu-cross.svg') center no-repeat;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle {
+    background: url('../img/icon-menu-burger.svg') center no-repeat;
 }
 
 .main-nav__list {
   @include list-default;
+}
+
+.main-nav--closed + .main-nav__block {
+  display: none;
 }
 
 .main-nav__item a {
@@ -23,8 +47,20 @@
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   border-bottom: 1px solid #000;
 }
+.main-nav__item a[href] {
+  &:hover {
+    color: $pink-text-color;
+  }
 
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
+}
 @media #{$tablet-widths} {
+  .main-nav--closed {
+    width: 700px;
+  }
+
   .main-nav__toggle {
     margin-right: $page-margin-tablet;
     margin-top: 40px;
@@ -32,28 +68,65 @@
 }
 
 @media #{$desktop-widths} {
-  .main-nav {
-    display: inline-block;
-    float: right;
+  .main-nav--closed {
+    position: static;
+    width: auto;
+    background: none;
   }
 
-  .main-nav__wrapper {
-    @include clearfix;
-    width: 780px;
-    margin: 22px $page-margin-desktop 0 0;
+  .main-nav__block {
+    display: inline-block;
   }
 
   .main-nav__toggle {
     display: none;
   }
 
-  .main-nav__item {
-    display: inline-block;
-    float: right;
+  .main-nav--closed + .main-nav__block {
+    display: block;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: $page-margin-desktop;
   }
 
   .main-nav__item a {
+    position: relative;
     border: none;
+    padding: 42px 0;
+    margin-left: 80px;
+  }
+
+  .main-nav__item a[href]{
+
+    &:hover {
+    color: $white-text-color;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  .main-nav__item a[href]::after {
+    content: "";
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    opacity: 0;
+  }
+
+  .main-nav__item a:hover::after {
+    opacity: 1;
+  }
+
+  .main-nav__item a:active::after {
+    opacity: 0;
   }
 }
 

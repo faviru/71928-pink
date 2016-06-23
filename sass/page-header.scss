@@ -1,17 +1,10 @@
 .page-header {
-  background: $dark-bg;
-  vertical-align: middle;
   background-color: $dark-bg;
 
   img {
     padding: 20px 0;
     margin-left: $page-margin-mobile;
   }
-}
-
-.page-header__logo{
-    border-bottom: 1px solid #000;
-    width: 320px;
 }
 
 @media #{$tablet-widths} {
@@ -31,12 +24,13 @@
 
 @media #{$desktop-widths} {
   .page-header{
+    display: flex;
+    justify-content: space-between;
     width: 1200px;
     background: rgba(0, 0, 0, 0.3);
   }
 
   .page-header__logo{
-    display: inline-block;
     width: 210px;
   }
 

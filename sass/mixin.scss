@@ -43,6 +43,15 @@
   text-transform: uppercase;
 }
 
+@mixin item-input-text() {
+  @include typography(18px, 30px, 400, $dark-text-color);
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 24px;
+  outline: none;
+  border: 1px solid $border-color;
+}
+
 @mixin item-label() {
   @include typography(18px, 40px, 400, $dark-text-color);
   display: inline-block;
@@ -57,7 +66,9 @@
   width: 35px;
   height: 35px;
   border: 2px solid $border-color;
+  outline: none;
   background-color: $lightest-bg;
+  cursor: pointer;
 }
 
 @mixin green-btn() {

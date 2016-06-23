@@ -1,9 +1,10 @@
 .competitor-contacts {
+  width: 100%;
   background: $lightest-bg;
+}
 
-  legend {
-    display: none;
-  }
+.competitor-contacts legend {
+  display: none;
 }
 
 .competitor-contacts__wrapper {
@@ -14,6 +15,12 @@
 
 .competitor-contacts__list {
   @include list-default;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.competitor-contacts__item {
+  flex-grow: 1;
 }
 
 .competitor-contacts__item-title {
@@ -21,9 +28,15 @@
 }
 
 .competitor-contacts__input {
-  @include typography(18px, 30px, 400, $dark-text-color);
-  padding: 15px 24px;
-  width: 232px;
+  @include item-input-text;
+}
+
+.competitor-contacts__input:hover {
+  border: 1px solid $border-color-hover;
+}
+
+.competitor-contacts__input:focus {
+  border: 1px solid $border-color-active;
 }
 
 @media #{$tablet-widths} {
@@ -33,7 +46,9 @@
     legend {
       display: block;
     }
+
     fieldset {
+      padding-top: 40px;
       padding-bottom: 0;
     }
   }
@@ -42,52 +57,29 @@
     padding: 30px 0;
   }
 
-  .competitor-contacts__list {
-    margin-top: 40px;
-  }
-
   .competitor-contacts__item {
-    position: relative;
-
-    &::before {
-      @include pink-item-label;
-      position: absolute;
-      content:'';
-      bottom: 20px;
-    }
-
-    &--phone::before {
-      content:'Номер телефона';
-    }
-
-    &--email::before {
-      content:'Адрес почты';
-    }
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
   }
+
   .competitor-contacts__input {
-    width: 446px;
-    margin-bottom: 70px;
+    flex-grow: 1;
   }
 
   .competitor-contacts__item-title {
-    display: none;
+    order: 2;
   }
 }
 
 
 @media #{$desktop-widths} {
-  .competitor-contacts__wrapper {
-    width: 940px;
-    margin: 0 $page-margin-desktop;
+  .competitor-contacts__list {
+    justify-content: space-between;
   }
   .competitor-contacts__item {
-    display: inline-block;
-
-    &:last-of-type {
-      float: right;
-    }
-  }
-  .competitor-contacts__input {
-    width: 320px;
+    width: 45%;
+    flex-grow: 0;
+    margin-bottom: 15px;
   }
 }

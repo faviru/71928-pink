@@ -17,4 +17,14 @@
   &--yt {
     background-image: url('../img/icon-youtube.svg');
   }
+
+  &:hover {
+    border-color: $border-color-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
+
+

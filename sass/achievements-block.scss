@@ -1,5 +1,6 @@
 .achievements-block{
   background: $light-bg;
+  width: 100%;
 }
 
 .achievements-block__wrapper {
@@ -13,18 +14,13 @@
 
 .achievements-block__list {
   @include list-default;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .achievements-block__item {
+  width: 100%;
   margin-top: 40px;
-
-  label {
-    @include item-label;
-
-    &::before {
-      @include item-label-before;
-    }
-  }
 
   &:first-child {
     label {
@@ -32,7 +28,21 @@
     }
   }
 }
+.achievements-block__item label {
+  @include item-label;
 
+  &::before {
+    @include item-label-before;
+  }
+
+  &:hover::before {
+    border-color: $border-color-hover;
+  }
+  
+  &:active::before {
+    border-color: $border-color-active;
+  }
+}
 .achievements-block__input {
   display: none;
 }
@@ -42,23 +52,19 @@
     order: 3;
     background: $lightest-bg;
   }
+
   .achievements-block__wrapper {
     padding: 30px 0;
+  }
+
+  .achievements-block__list {
+    justify-content: space-between;
   }
 }
 
 @media #{$desktop-widths} {
-  .achievements-block__wrapper {
-    width: 940px;
-    margin: 0 $page-margin-desktop;
-  }
   .achievements-block__item {
     display: inline-block;
-    width: 260px;
-    margin-right: 12px;
-
-    &:nth-of-type(3n) {
-      margin-right: 0;
-    }
+    width: 32%;
   }
 }

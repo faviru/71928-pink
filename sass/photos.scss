@@ -6,7 +6,18 @@
     background-color: $lightest-bg;
   }
 
+  .photos__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
 @media #{$tablet-widths} {
+  .photos__container {
+    justify-content: space-between;
+    margin: 0 $page-margin-tablet;
+  }
+
   .photos__promo {
     margin: 0 $page-margin-tablet;
     padding-top: 95px;
@@ -15,13 +26,6 @@
     &--bottom {
       padding: 70px 0;
     }
-  }
-
-  .photos__container {
-    @include container;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
 }
 
@@ -32,5 +36,9 @@
     &--bottom {
       margin: 0 auto;
     }
+  }
+
+  .photos__container {
+    margin: 0 $page-margin-desktop;
   }
 }
