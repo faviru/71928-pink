@@ -1,13 +1,16 @@
 .page-footer {
   background-color: $lightest-bg;
-  text-align: center;
 
   &--index {
     display: none;
   }
 }
+
 .page-footer__wrapper {
   @include container;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 35px 0;
 }
 
@@ -43,18 +46,17 @@
       display: block;
     }
   }
-  .page-footer__logo {
-    display: inline-block;
-    float: left;
+
+  .page-footer__wrapper {
+    justify-content: space-around;
   }
+
   .page-footer__socials {
-    display: inline-block;
     margin-top: 0;
   }
+
   .page-footer__copyright {
-    display: inline-block;
-    float: right;
-    margin-top: 0;
+    margin-top: 10px;
   }
 }
 @media #{$desktop-widths} {

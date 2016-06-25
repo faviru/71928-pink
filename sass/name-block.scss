@@ -1,6 +1,6 @@
 .name-block {
   order: 0;
-  padding: 0 0 40px 0;
+  padding: 0 0 20px 0;
 }
 
 .name-block__wrapper {
@@ -9,31 +9,34 @@
 
 .name-block__list {
   @include list-default;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.name-block__item {
+  flex-grow: 1;
 }
 
 .name-block__item-title {
   @include pink-item-label;
-
-  &:first-of-type {
-    margin-top: 0;
-  }
 }
 
 .name-block__input {
-  @include typography(18px, 30px, 400, $dark-text-color);
-  width: 232px;
-  padding: 15px 24px;
+  @include item-input-text;
+  margin-bottom: 20px;
+}
+
+.name-block__input:hover {
+  border: 1px solid $border-color-hover;
+}
+
+.name-block__input:focus {
+  border: 1px solid $border-color-active;
 }
 
 @media #{$tablet-widths} {
-  .name-block__item-title {
-    float: left;
-    padding: 15px 0;
-    margin: 0;
-  }
-
   .name-block__item {
-    @include clearfix;
+    display: flex;
     margin-top: 50px;
 
     &:first-of-type {
@@ -41,36 +44,29 @@
     }
   }
 
-  .name-block__input {
-    float: right;
-    width: 470px;
+  .name-block__item-title {
+    padding: 15px 0;
+    margin: 0;
+    margin-right: 18px;
   }
 
-  .name-block__input[id="first-name"] {
-    width: 510px;
+  .name-block__input {
+    flex-grow: 1;
+    margin-bottom: 0;
   }
 }
 
 @media #{$desktop-widths} {
+  .name-block {
+    margin-top: 20px;
+    padding: 0;
+  }
+
   .name-block__wrapper {
     width: auto;
-    padding-top: 20px;
-    margin-left: $page-margin-desktop;
   }
+
   .name-block__list{
     width: 435px;
-  }
-
-  .name-block__item-title {
-    display: inline-block;
-  }
-
-  .name-block__input {
-    float: right;
-    width: 285px;
-  }
-
-  .name-block__input[id="first-name"] {
-    width: 325px;
   }
 }

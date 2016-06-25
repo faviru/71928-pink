@@ -5,6 +5,12 @@
   text-align: center;
 }
 
+.competition__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .competition__description {
   @include container;
   padding: 50px 0;
@@ -35,6 +41,16 @@
 .competition__submit {
   @include green-btn;
   margin: 0;
+
+  &:hover {
+    background-color: $dark-green-color;
+  }
+
+  &:focus {
+    background-color: $dark-green-color;
+    color: rgba(255, 255, 255, 0.3);
+    outline: none;
+  }
 }
 
 .competition__send-note {
@@ -50,12 +66,6 @@
 }
 
 @media #{$tablet-widths} {
-  .competition__container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
   .competition__description {
     padding: 90px 0 70px 0;
 
@@ -63,9 +73,6 @@
       font-size: 18px;
       padding: 0 60px;
     }
-  }
-  .competition__send-form-wrapper {
-    @include clearfix;
   }
 
   .competition__title {
@@ -83,12 +90,12 @@
   .competition__send-form {
     order: 5;
   }
-  .competition__submit {
-    float: left;
+
+  .competition__send-form-wrapper {
+    display: flex;
+    justify-content: space-between;
   }
   .competition__send-note {
-    display: inline-block;
-    float: right;
     margin: 0;
     padding: 20px 0;
   }
@@ -97,9 +104,6 @@
 @media #{$desktop-widths} {
   .competition__container {
     justify-content: space-between;
-  }
-
-  .competition__send-form-wrapper{
-    margin: 0 $page-margin-desktop;
+    padding: 0 $page-margin-desktop;
   }
 }
