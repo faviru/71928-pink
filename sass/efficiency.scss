@@ -11,23 +11,36 @@
   .efficiency__wrapper {
     @include container;
     @include clearfix;
-    padding: 60px 0;
+    padding-top: 62px;
+    padding-bottom: 60px;
   }
 
   .efficiency__img {
+    position: relative;
     float: left;
-    width: 300px;
+    width: 234px;
+    height: 272px;
+    background-image: url("../img/icon-editor-diagram-fill.svg"), url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-position: 15px 54px, center;
+    background-size: 203px 203px, contain;
 
-    img {
-      width: 240px;
-      height: 277px;
+    &::after {
+      @include typography(96px, 150px, 700, $pink-text-color);
+      content: '24';
+      position: absolute;
+      top: 76px;
+      left: 61px;
+      width: 115px;
+      height: 80px;
+
     }
   }
 
   .efficiency__about {
     @include typography(14px, 24px, 400, $dark-text-color);
     float: right;
-    width: 310px;
+    width: 314px;
     text-align: left;
 
     p {
@@ -42,7 +55,7 @@
 
   .efficiency__about-title {
     @include typography(30px, 36px, 700, $black-text-color);
-    margin-top: 40px;
+    margin-top: 36px;
     margin-bottom: 0;
   }
 }
@@ -52,21 +65,38 @@
     background: $light-bg;
   }
 
-  .efficiency__img {
-    width: 350px;
+  .efficiency__wrapper{
+    padding-top: 25px;
+    padding-bottom: 68px;
+  }
 
-    img {
-      width: 298px;
-      height: 345px;
+  .efficiency__img {
+    width: 300px;
+    height: 346px;
+    background-position: 24px 70px, center;
+    background-size: 253px 253px, contain;
+
+    &::after {
+      top: 95px;
+      left: 80px;
+      width: 140px;
+      height: 100px;
+      font-size: 120px;
+      line-height: 189px;
     }
   }
 
+  .efficiency__about-title br {
+    display: none;
+  }
+
   .efficiency__about {
-    width: 570px;
+    width: 574px;
     font-size: 18px;
 
     p {
-      margin: 25px 0 45px 0;
+      margin: 27px 0 37px 0;
+      line-height: 28px;
     }
   }
 

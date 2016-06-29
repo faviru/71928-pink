@@ -5,7 +5,7 @@
 
 .achievements-block__wrapper {
   @include container;
-  padding: 40px 0 50px 0;
+  padding: 36px 0 50px 0;
 }
 
 .achievements-block__title {
@@ -20,7 +20,7 @@
 
 .achievements-block__item {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 41px;
 
   &:first-child {
     label {
@@ -28,6 +28,7 @@
     }
   }
 }
+
 .achievements-block__item label {
   @include item-label;
 
@@ -38,13 +39,21 @@
   &:hover::before {
     border-color: $border-color-hover;
   }
-  
+
   &:active::before {
     border-color: $border-color-active;
   }
 }
+
 .achievements-block__input {
   display: none;
+}
+
+.achievements-block__input:checked + label:before {
+  background-image: url('../img/icon-yes-pink.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px 16px;
 }
 
 @media #{$tablet-widths} {
@@ -54,17 +63,46 @@
   }
 
   .achievements-block__wrapper {
-    padding: 30px 0;
+    padding: 28px 0;
   }
 
   .achievements-block__list {
     justify-content: space-between;
+    margin-top: 1px;
+  }
+
+  .achievements-block__item {
+    margin-top: 43px;
+  }
+
+  .achievements-block__item label {
+    padding-left: 57px;
   }
 }
 
 @media #{$desktop-widths} {
+  .achievements-block__wrapper {
+    padding-top: 57px;
+    padding-bottom: 0;
+  }
   .achievements-block__item {
     display: inline-block;
     width: 32%;
+  }
+
+  .achievements-block__list {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 169px;
+  }
+
+  .achievements-block__item:nth-last-of-type(3)
+  .achievements-block__item:nth-last-of-type(4) {
+    margin-left: 52px;
+  }
+
+  .achievements-block__item:nth-last-of-type(5)
+  .achievements-block__item:nth-last-of-type(6) {
+    margin-left: 44px
   }
 }
