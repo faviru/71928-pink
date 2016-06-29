@@ -1,5 +1,5 @@
 .photo {
-  margin-top: 20px;
+  margin-top: 22px;
   font-size: 0;
 
   &--panorama {
@@ -12,8 +12,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  flex-direction: column;
   box-sizing: border-box;
-  padding: 20px 18px;
+  padding: 18px 18px;
   background-color: $light-bg;
 }
 
@@ -23,73 +24,72 @@
 
 .photo--panorama img {
   width: 320px;
-  height: 180px;
+  height: 137px;
 }
 
 .photo__author {
   @include typography(14px, 24px, 700, $dark-text-color);
-  //padding: 0 15px;
   margin: 0;
 }
 
 .photo__timing {
   @include typography(12px, 24px, 300, $dark-text-color);
+  padding-left: 3px;
   text-transform: uppercase;
 }
 
 .photo__comment {
   @include typography(14px, 24px, 400, $dark-text-color);
-  //padding: 0 15px;
-  margin: 5px 0 20px 0;
+  width: 100%;
+  margin: 0 0 9px 0;
 }
 
   .photo__like {
     display: flex;
     align-items: center;
-    //padding-left: 15px;
   }
 
 .photo__like-btn {
   @include btn-default;
-  //display: inline-block;
   width: 13px;
   height: 12px;
-  margin-right: 20px;
+  margin-right: 18px;
   background-image: url('../img/icon-heart.svg');
   background-repeat: no-repeat;
+  background-color: transparent;
 }
 
 .photo__like-count {
   @include typography(12px, 24px, 400, $pink-text-color);
-  //display: inline-block;
   margin: 0;
-  //padding-right: 20px;
   text-transform: uppercase;
 }
 
 @media #{$tablet-widths} {
   .photo {
     width: 300px;
+    margin-top: 20px;
   }
 
   .photo__wrapper {
-    //position: relative;
     width: 300px;
     height: 155px;
     box-sizing: border-box;
-    padding: 25px 30px;
+    padding: 23px 28px;
   }
 
   .photo__comment {
-    width: 100%;
     margin: 0;
   }
 
   .photo__like {
-    // position: absolute;
-    // bottom: 20px;
+    justify-content: space-between;
     margin-top: auto;
+  }
 
+  .photo__like-btn {
+    order: 1;
+    margin-right: 0;
   }
 
   .photo__link img {
@@ -99,6 +99,7 @@
 
   .photo--panorama {
     width: auto;
+    margin-top: 0;
     margin-bottom: 30px;
 
     img {
@@ -107,33 +108,37 @@
     }
 
     .photo__wrapper {
-      //position: relative;
+      flex-direction: initial;
       align-items: baseline;
       width: 620px;
+      height: auto;
       margin: 0 $page-margin-tablet;
     }
 
     .photo__like {
       order: 1;
       margin: 0;
-      //position: absolute;
-      //top: 20px;
-      //right: 15px;;
     }
 
     .photo__comment {
       order: 2;
-    }
-    .photo__like-btn {
-      //float: right;
     }
   }
 
 }
 
 @media #{$desktop-widths} {
+  .photo {
+    margin-top: 50px;
+  }
+
   .photo__link img {
     height: 400px;
+  }
+
+  .photo--panorama {
+    margin-top: 0;
+    margin-bottom: 4px;
   }
 
   .photo--panorama .photo__wrapper {
@@ -148,16 +153,15 @@
 
   .photo--panorama img {
     width: 1200px;
-    height: 510px;
+    height: 506px;
   }
 
   .photo__like {
     justify-content: space-between;
-    width: 300px;
   }
 
   .photo__like-btn {
-    order: 1;
+    margin-left: 21px;
     margin: 0;
   }
 }

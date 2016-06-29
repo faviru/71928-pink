@@ -5,13 +5,14 @@
 .vacation-review__wrapper {
   @include container;
   padding-top: 60px;
-  padding-bottom: 46px;
+  padding-bottom: 43px;
 }
 
 .vacation-review__input {
   @include item-input-text;
-  margin-top: 15px;
-  padding: 20px;
+  height: 200px;
+  margin-top: 17px;
+  padding: 15px 20px;
   resize: none;
   overflow: hidden;
 }
@@ -30,10 +31,12 @@
   }
 
   .vacation-review__wrapper {
-    padding-top: 30px;
+    padding-top: 58px;
+    padding-bottom: 0;
   }
+
   .vacation-review__input {
-    margin-top: 40px;
+    margin-top: 38px;
     width: 100%;
     height: 190px;
   }
@@ -44,8 +47,11 @@
     width: 940px;
   }
 
+  .vacation-review__wrapper fieldset {
+    padding-bottom: 42px;
+  }
   .vacation-review__input {
-    margin-top: 40px;
-    height: 125px;
+    margin-top: 35px;
+    height: 126px;
   }
 }

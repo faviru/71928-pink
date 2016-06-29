@@ -11,7 +11,24 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 35px 0;
+  padding: 36px 0;
+}
+
+.page-footer__logo {
+  width: 147px;
+  height: 40px;
+  background-image: url(../img/logo-sprite.svg);
+  background-repeat: no-repeat;
+  background-position: -4px -148px;
+}
+
+.page-footer__logo:hover {
+  background-position: -4px -100px;
+}
+
+.page-footer__logo:active {
+  background-position: -4px -148px;
+  opacity: .3;
 }
 
 .page-footer__socials {
@@ -26,6 +43,7 @@
     @include typography(14px, 18px, 400, $dark-text-color);
     display: inline-block;
     margin: 0;
+    padding-left: 17px;
   }
 }
 
@@ -33,11 +51,22 @@
   display: inline-block;
   width: 27px;
   height: 34px;
-  margin: 0 15px;
+  margin: 0;
+  margin-right: 15px;
   vertical-align: middle;
   background-repeat: no-repeat;
-  background-position: center;
-  background-image: url('../img/htmlacademy.svg');
+  background-size: 54px 68px;
+  background-image: url("../img/htmlacademy-sprite.svg");
+  background-position: -13px -31px;
+}
+
+.page-footer__copyright-link:hover {
+  background-position: -13px 2px;
+}
+
+.page-footer__copyright-link:active {
+  background-position: -13px 2px;
+  opacity: .3;
 }
 
 @media #{$tablet-widths} {
@@ -48,18 +77,48 @@
   }
 
   .page-footer__wrapper {
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .page-footer__socials {
-    margin-top: 0;
+    margin-top: 5px;
   }
 
   .page-footer__copyright {
-    margin-top: 10px;
+    margin-top: 13px;
+  }
+
+  .page-footer__copyright-link {
+    margin-left: 10px;
+    margin-right: 0;
   }
 }
+
 @media #{$desktop-widths} {
+  .page-footer__wrapper {
+    padding: 67px 0;
+  }
+
+  .page-footer__logo {
+    background-position: -4px -52px;
+  }
+
+  .page-footer__logo:hover {
+    background-position: -4px -4px;
+  }
+
+  .page-footer__logo:active {
+    background-position: -4px -52px;
+    opacity: .3;
+  }
+  .page-footer__socials {
+    margin-left: 36px;
+  }
+
+  .page-footer__copyright {
+    margin-top: 17px;
+  }
+
   .page-footer__copyright p {
     font-size: 18px;
   }

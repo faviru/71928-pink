@@ -1,4 +1,7 @@
 .main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #000;
 
   &--closed {
@@ -6,27 +9,53 @@
     width: 320px;
     background-color: rgba(0, 0, 0, 0.3);
     border-bottom: none;
+    z-index: 1;
   }
 }
 
 .main-nav__toggle {
   @include btn-default;
-  float: right;
-  margin-top: 20px;
-  margin-bottom: 20px;
   margin-right: $page-margin-mobile;
-  width: 50px;
-  height: 24px;
+  width: 26px;
+  height: 25px;
   background-color: $dark-bg;
-  background: url('../img/icon-menu-cross.svg') center no-repeat;
+  background-image: url('../img/icon-sprite.svg');
+  background-repeat: no-repeat;
+  background-position: -4px -402px;
+  background-color: transparent;
+
+  &:hover {
+    background-position: -4px -370px;
+  }
+
+  &:active {
+    background-position: -4px -370px;
+    opacity: .3;
+  }
 
   &:focus {
     outline: none;
   }
 }
 
+.main-nav__block {
+  z-index: 1;
+}
+
 .main-nav--closed .main-nav__toggle {
-    background: url('../img/icon-menu-burger.svg') center no-repeat;
+  width: 50px;
+  height: 26px;
+  margin-bottom: 5px;
+  background-position: -4px -338px;
+
+  &:hover {
+    background-position: -4px -306px;
+  }
+
+  &:active {
+    background-position: -4px -306px;
+    opacity: .3;
+  }
 }
 
 .main-nav__list {
@@ -39,7 +68,7 @@
 
 .main-nav__item a {
   @include a-btn-default;
-  padding: 16px 0;
+  padding: 15px 0;
   font-size: 18px;
   line-height: 32px;
   text-transform: uppercase;
@@ -65,7 +94,7 @@
 
   .main-nav__toggle {
     margin-right: $page-margin-tablet;
-    margin-top: 40px;
+    margin-top: 3px;
   }
 }
 
@@ -97,8 +126,9 @@
   .main-nav__item a {
     position: relative;
     border: none;
-    padding: 42px 0;
+    padding: 37px 0;
     margin-left: 80px;
+    text-transform: initial;
   }
 
   .main-nav__item a[href]{

@@ -5,7 +5,7 @@
 .editor__wrapper {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px 0 0 0;
+  padding: 20px 0 5px 0;
 }
 
 .editor__input {
@@ -21,8 +21,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  align-items: center;
+  margin-top: 37px;
+  margin-bottom: 33px;
 }
 
 .editor__toggle {
@@ -30,27 +31,43 @@
   margin-right: 30px;
   vertical-align: middle;
   background-repeat: no-repeat;
-  background-position: center;
+  background-image: url('../img/icon-sprite.svg');
+  opacity: .3;
   cursor: pointer;
+}
 
-  &--crop {
-    width: 43px;
-    height: 44px;
-    background-image: url('../img/icon-editor-crop.svg');
-  }
+#editor-1:checked ~ .editor__toggles .editor__toggle--crop {
+  background-position: -6px -86px;
+  opacity: 1;
+}
 
-  &--fill {
-    width: 48px;
-    height: 48px;
-    background-image: url('../img/icon-editor-fill.svg');
-  }
+#editor-2:checked ~ .editor__toggles .editor__toggle--fill {
+  background-position: -4px -196px;
+  opacity: 1;
+}
 
-  &--contrast {
-    width: 35px;
-    height: 35px;
-    margin-right: 0;
-    background-image: url('../img/icon-editor-contrast.svg');
-  }
+#editor-3:checked ~ .editor__toggles .editor__toggle--contrast {
+  background-position: -4px -4px;
+  opacity: 1;
+}
+
+.editor__toggle--crop {
+  width: 44px;
+  height: 44px;
+  background-position: -6px -142px;
+}
+
+.editor__toggle--fill {
+  width: 48px;
+  height: 43px;
+  background-position: -4px -252px;
+}
+
+.editor__toggle--contrast {
+  width: 32px;
+  height: 32px;
+  margin-right: 0;
+  background-position: -4px -44px;
 }
 
 .editor__tools {
@@ -64,7 +81,7 @@
   height: 2px;
   background-color: $dark-text-color;
   width: 240px;
-  margin: 20px;
+  margin-top: 35px;
 }
 
 .editor__toggler {
@@ -186,9 +203,55 @@ input[id="editor-3"]:checked ~ .editor__toggles .editor__bar--contrast {
   }
 
   .editor__toggle {
+    margin: 27px 0 25px 0;
+    background-size: 29px auto;
+    opacity: 1;
+  }
+
+  .editor__toggle--crop {
+    width: 22px;
+    height: 22px;
+    background-position: -3px -43px;
+
+    &:hover,
+    &:active {
+      background-position: -3px -43px;
+    }
+  }
+
+  .editor__toggle--fill {
     width: 24px;
-    height: 24px;
-    margin: 24px 0 25px 0;
+    height: 22px;
+    background-position: -1px -98px;
+
+    &:hover,
+    &:active {
+      background-position: -1px -98px;
+    }
+  }
+
+  .editor__toggle--contrast {
+    width: 16px;
+    height: 16px;
+    margin: 18px 0 25px 5px;
+    background-position: -2px -2px;
+
+    &:hover,
+    &:active {
+      background-position: -2px -2px;
+    }
+  }
+
+  #editor-1:checked ~ .editor__toggles .editor__toggle--crop {
+    background-position: -3px -43px;
+  }
+
+  #editor-2:checked ~ .editor__toggles .editor__toggle--fill {
+    background-position: -1px -98px;
+  }
+
+  #editor-3:checked ~ .editor__toggles .editor__toggle--contrast {
+    background-position: -2px -2px;
   }
 
   .editor__bar {
@@ -196,7 +259,7 @@ input[id="editor-3"]:checked ~ .editor__toggles .editor__bar--contrast {
     position: relative;
     order: initial;
     width: 202px;
-    margin: 35px 18px 36px 18px;
+    margin: 33px 18px 34px 18px;
 
     &::after {
       position: absolute;
@@ -222,12 +285,17 @@ input[id="editor-3"]:checked ~ .editor__toggles .editor__bar--contrast {
   .editor__btn {
     width: 260px;
   }
+
+  .editor__submit-btn {
+    margin-bottom: 23px;
+  }
 }
 
 @media #{$desktop-widths} {
   .editor{
     width: 940px;
     margin: 0 $page-margin-desktop;
+    margin-bottom: 33px;
   }
 
   .editor__wrapper {
@@ -241,14 +309,44 @@ input[id="editor-3"]:checked ~ .editor__toggles .editor__bar--contrast {
   }
 
   .editor__toggle {
-    width: 38px;
-    height: 38px;
-    margin: 17px 0;
+    margin: 12px 0 14px 0;
+    background-size: auto;
+  }
+
+  .editor__toggle--crop {
+    width: 44px;
+    height: 44px;
+    background-position: -6px -86px;
+  }
+
+  .editor__toggle--fill {
+    width: 48px;
+    height: 43px;
+    background-position: -4px -196px;
+  }
+
+  .editor__toggle--contrast {
+    width: 32px;
+    height: 32px;
+    margin-right: 0;
+    background-position: -4px -4px;
+  }
+
+  #editor-1:checked ~ .editor__toggles .editor__toggle--crop {
+    background-position: -6px -86px;
+  }
+
+  #editor-2:checked ~ .editor__toggles .editor__toggle--fill {
+    background-position: -4px -196px;
+  }
+
+  #editor-3:checked ~ .editor__toggles .editor__toggle--contrast {
+    background-position: -4px -196px;
   }
 
   .editor__bar {
     width: 288px;
-    margin: 36px 30px 37px 20px;
+    margin: 30px 30px 30px 20px;
 
     &::after {
       width: 410px;

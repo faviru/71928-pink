@@ -9,8 +9,8 @@
 
 .competitor-contacts__wrapper {
   @include container;
-  padding-top: 40px;
-  padding-bottom: 50px;
+  padding-top: 15px;
+  padding-bottom: 57px;
 }
 
 .competitor-contacts__list {
@@ -48,19 +48,19 @@
     }
 
     fieldset {
-      padding-top: 40px;
+      padding-top: 36px;
       padding-bottom: 0;
     }
   }
 
   .competitor-contacts__wrapper {
-    padding: 30px 0;
+    padding: 29px 0;
   }
 
   .competitor-contacts__item {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 35px;
+    margin-bottom: 22px;
   }
 
   .competitor-contacts__input {
@@ -69,17 +69,30 @@
 
   .competitor-contacts__item-title {
     order: 2;
+    margin-top: 12px;
+    padding-left: 17px;
   }
 }
 
 
 @media #{$desktop-widths} {
+  .competitor-contacts__wrapper {
+    padding-top: 53px;
+    padding-bottom: 0;
+  }
+
   .competitor-contacts__list {
     justify-content: space-between;
   }
+
   .competitor-contacts__item {
-    width: 45%;
+    width: 373px;
     flex-grow: 0;
-    margin-bottom: 15px;
+    margin-bottom: 13px;
+  }
+
+  .competitor-contacts__item-title {
+    margin-bottom: 0;
+    margin-top: 9px;
   }
 }
