@@ -8,23 +8,39 @@
 }
 
 .photo__wrapper {
-  @include container;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: column;
   box-sizing: border-box;
+  width: 280px;
+  margin: 0 auto;
   padding: 18px 18px;
   background-color: $light-bg;
 }
 
 .photo__link {
   display: block;
+  position: relative;
+  text-decoration: none;
 }
 
 .photo--panorama img {
   width: 320px;
   height: 137px;
+}
+
+.photo--panorama .photo__link::after {
+  @include typography(12px, 24px, 700, $white-text-color);
+  position: absolute;
+  top: 0;
+  right: $page-margin-mobile;
+  content: 'Панорама дня';
+  width: 140px;
+  padding: 6px 0;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $pink-bg;
 }
 
 .photo__author {
@@ -76,6 +92,15 @@
     height: 155px;
     box-sizing: border-box;
     padding: 23px 28px;
+  }
+
+  .photo--panorama .photo__link::after {
+    top: 55px;
+    right: $page-margin-tablet;
+  }
+
+  .photo__wrapper {
+    width: 300px;
   }
 
   .photo__comment {
@@ -142,9 +167,14 @@
   }
 
   .photo--panorama .photo__wrapper {
+    flex-direction: row;
     width: 940px;
     height: 96px;
     margin: 0 $page-margin-desktop;
+  }
+
+  .photo--panorama .photo__link::after {
+    right: $page-margin-desktop;
   }
 
   .photo--panorama .photo__like {

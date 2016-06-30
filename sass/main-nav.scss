@@ -87,6 +87,15 @@
   }
 }
 
+.main-nav--nojs {
+  position: static;
+  background-color: transparent;
+}
+
+.main-nav--nojs ~ .main-nav__block {
+  display: block;
+}
+
 @media #{$tablet-widths} {
   .main-nav--closed {
     width: 700px;
@@ -107,6 +116,7 @@
 
   .main-nav__block {
     display: inline-block;
+    vertical-align: middle;
   }
 
   .main-nav__toggle {

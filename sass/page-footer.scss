@@ -44,6 +44,7 @@
     display: inline-block;
     margin: 0;
     padding-left: 17px;
+    vertical-align: middle;
   }
 }
 
@@ -55,17 +56,16 @@
   margin-right: 15px;
   vertical-align: middle;
   background-repeat: no-repeat;
-  background-size: 54px 68px;
   background-image: url("../img/htmlacademy-sprite.svg");
-  background-position: -13px -31px;
+  background-position: -1px -34px;
 }
 
 .page-footer__copyright-link:hover {
-  background-position: -13px 2px;
+  background-position: -1px 1px;
 }
 
 .page-footer__copyright-link:active {
-  background-position: -13px 2px;
+  background-position: -1px 1px;
   opacity: .3;
 }
 

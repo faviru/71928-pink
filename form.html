@@ -3,11 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name=v iewport content=w idth=device-width initial-scale=1>
+  <meta name=viewport content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <script src="js/picturefill.js"></script>
 </head>
 
 <body class="page">
@@ -49,6 +50,7 @@
                 <label for="patronymic-name" class="name-block__item-title">Отчество:</label>
                 <input type="text" id="patronymic-name" class="name-block__input" placeholder="Ну и отчество тоже">
               </li>
+            </ul>
           </div>
         </section>
 
@@ -141,9 +143,9 @@
             <p class="competition__send-note"><sup>*</sup> — обязательные<span>для заполнения</span> поля</p>
           </div>
         </section>
+      </div>
     </form>
 
-    </div>
     <div class="pop-up pop-up__falure">
       <div class="pop-up__wrapper">
         <h2 class="pop-up__title">Что-то пошло не так!</h2>
@@ -162,6 +164,7 @@
         <button class="pop-up__close">Закрыть окно</button>
       </div>
     </div>
+
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo" href="./"></a>
@@ -177,6 +180,8 @@
       </div>
     </footer>
   </div>
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
 </body>
 
 </html>

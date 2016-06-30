@@ -18,11 +18,11 @@
 }
 
 .vacation-review__input:hover {
-  border: 1px solid $border-color-hover;
+  border-color: $border-color-hover;
 }
 
 .vacation-review__input:focus {
-  border: 1px solid $border-color-active;
+  border-color: $border-color-active;
 }
 
 @media #{$tablet-widths} {

@@ -3,17 +3,17 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name= viewport content= width=device-width initial-scale=1>
+  <meta name=viewport content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <script src="js/picturefill.js"></script>
 </head>
 
 <body class="page">
   <div class="page__wrapper">
     <header class="page-header">
-      <div class="page-header__logo-block main-nav main-nav--closed">
+      <div class="page-header__logo-block main-nav main-nav--closed main-nav--nojs">
         <div class="page-header__logo">
         </div>
         <button class="main-nav__toggle"></button>
@@ -72,11 +72,10 @@
             <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
           </div>
         </div>
-              <picture>
-                <source media="(min-width: 768px)" srcset="img/iphone-screen-3-tablet@1x.png" srcset="img/iphone-screen-3-tablet@2x.png 2x">
-                <img src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" width="157" height="320" alt="Пример приложения" class="advantages__promo-img">
-              </picture>
-
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/iphone-screen-3-tablet@1x.png" srcset="img/iphone-screen-3-tablet@2x.png 2x">
+          <img src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" width="157" height="320" alt="Пример приложения" class="advantages__promo-img">
+        </picture>
       </div>
     </section>
     <section class="efficiency">
@@ -122,17 +121,18 @@
           </li>
         </ul>
         <div class="slider__toggles reviews__toggles">
-          <label for="reviews-input-1" class="slider__toggle slider__toggle--checked">1</label>
+          <label for="reviews-input-1" class="slider__toggle">1</label>
           <label for="reviews-input-2" class="slider__toggle">2</label>
           <label for="reviews-input-3" class="slider__toggle">3</label>
         </div>
       </div>
     </section>
+
     <section class="version">
       <div class="version__wrapper slider">
-        <input type="radio" name="version-input-1" class="slider__input">
-        <input type="radio" name="version-input-2" class="slider__input" checked>
-        <input type="radio" name="version-input-3" class="slider__input">
+        <input type="radio" name="version-input" id="version-input-1" class="slider__input">
+        <input type="radio" name="version-input" id="version-input-2" class="slider__input" checked>
+        <input type="radio" name="version-input" id="version-input-3" class="slider__input">
         <table class="version__list">
           <tr>
             <th class="version__title"></th>
@@ -176,8 +176,9 @@
           </tr>
           <tr>
             <td>
-              <div class="version__cell version__cell">
+              <div class="version__cell">
                 <p class="version__parameter--main">Смайлики</p>
+              </div>
             </td>
             <td>
               <div class="version__cell">
@@ -200,8 +201,9 @@
           </tr>
           <tr>
             <td>
-              <div class="version__cell version__cell">
+              <div class="version__cell">
                 <p class="version__parameter--main">Комментарии</p>
+              </div>
             </td>
             <td>
               <div class="version__cell">
@@ -225,10 +227,11 @@
         </table>
         <div class="slider__toggles version__toggles">
           <label for="version-input-1" class="slider__toggle">1</label>
-          <label for="version-input-2" class="slider__toggle slider__toggle--checked">2</label>
+          <label for="version-input-2" class="slider__toggle">2</label>
           <label for="version-input-3" class="slider__toggle">3</label>
         </div>
     </section>
+
     <section class="contacts">
       <div class="contacts__wrapper">
         <h2 class="contacts__title">Остались вопросы?<br> Свяжитесь с нами!</h2>
@@ -247,7 +250,8 @@
           </div>
         </div>
       </div>
-      <div class="map-block" id="map-block"></div>
+      <div class="map-block" id="map-block">
+      </div>
     </section>
     <footer class="page-footer page-footer--index">
       <div class="page-footer__wrapper">
@@ -264,6 +268,8 @@
       </div>
     </footer>
     </div>
+  <script src="js/main.js" defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBy4H01dUPhXpWlCsN9Xc0-jHiwg7FqFo4&callback=map" defer></script>
 </body>
 
 </html>
