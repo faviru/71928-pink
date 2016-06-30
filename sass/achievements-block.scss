@@ -87,13 +87,14 @@
   }
   .achievements-block__item {
     display: inline-block;
+    vertical-align: middle;
     width: 32%;
   }
 
   .achievements-block__list {
     flex-direction: column;
     justify-content: flex-start;
-    height: 169px;
+    height: 179px;
   }
 
   .achievements-block__item:nth-last-of-type(3)

@@ -12,6 +12,7 @@
   &::after {
     position: absolute;
     content: '';
+    z-index: 1;
     width: 320px;
     height: 34px;
     bottom: -34px;

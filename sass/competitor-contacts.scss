@@ -32,11 +32,11 @@
 }
 
 .competitor-contacts__input:hover {
-  border: 1px solid $border-color-hover;
+  border-color: $border-color-hover;
 }
 
 .competitor-contacts__input:focus {
-  border: 1px solid $border-color-active;
+  border-color: $border-color-active;
 }
 
 @media #{$tablet-widths} {
@@ -60,7 +60,28 @@
   .competitor-contacts__item {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
     margin-bottom: 22px;
+  }
+
+  .competitor-contacts__item::after {
+    position: absolute;
+    content: '';
+    top: 2px;
+    right: 2px;
+    width: 60px;
+    height: 60px;
+    background-color: $border-color;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .competitor-contacts__item--phone::after {
+    background-image: url('../img/icon-phone.svg');
+  }
+
+  .competitor-contacts__item--email::after {
+    background-image: url('../img/icon-mail.svg');
   }
 
   .competitor-contacts__input {

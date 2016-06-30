@@ -4,19 +4,21 @@
 
   img {
     position: absolute;
-    bottom: 4px;
+    bottom: 0;
     left: 0;
   }
 }
 
 .intro--sub-page,
 .intro__img {
+  background-color: #19222b;
   background: url('../img/bg-back-mobile@1x.jpg') center no-repeat;
 }
 
 @media (min-resolution: 1.5dppx) {
   .intro--sub-page,
   .intro__img {
+    background-color: #19222b;
     background-image: url('../img/bg-back-mobile@2x.jpg');
     background-size: 700px auto;
   }

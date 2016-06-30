@@ -13,6 +13,7 @@
   @include list-default;
   position: absolute;
   left:-543px;
+  border-collapse: collapse;
 
   th,
   td {
@@ -103,6 +104,34 @@
   margin-top: 308px;
 }
 
+#version-input-1:checked ~ .version__list {
+  left: -261px;
+}
+
+#version-input-2:checked ~ .version__list {
+  left: -543px;
+}
+
+#version-input-3:checked ~ .version__list {
+  left: -824px;
+}
+
+#version-input-1:checked ~ .version__toggles > label[for="version-input-1"],
+#version-input-2:checked ~ .version__toggles > label[for="version-input-2"],
+#version-input-3:checked ~ .version__toggles > label[for="version-input-3"] {
+  border: 3px solid #283645;
+  background-color: $lightest-bg;
+  opacity: 1;
+  cursor: default;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
 @media #{$tablet-widths} {
   .version__wrapper {
     margin: 0 $page-margin-tablet;

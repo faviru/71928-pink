@@ -8,6 +8,7 @@
     left: 0;
   }
 }
+
 .reviews__wrapper {
   @include container;
   padding: 42px 0 40px 0;
@@ -44,6 +45,23 @@
 .reviews__comment{
   @include typography(14px, 30px, 400, $dark-text-color);
   margin-top: 15px;
+}
+
+#reviews-input-1:checked ~ .reviews__toggles > label[for="reviews-input-1"],
+#reviews-input-2:checked ~ .reviews__toggles > label[for="reviews-input-2"],
+#reviews-input-3:checked ~ .reviews__toggles > label[for="reviews-input-3"] {
+  border: 3px solid #283645;
+  background-color: $lightest-bg;
+  opacity: 1;
+  cursor: default;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 }
 
 @media #{$tablet-widths} {
