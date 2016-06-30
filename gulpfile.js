@@ -50,9 +50,7 @@ gulp.task("style", function() {
         "last 2 Opera versions",
         "last 2 Edge versions"
       ]}),
-      mqpacker({
-        sort: true
-      })
+      mqpacker()
     ]))
     .pipe(gulp.dest("build/css"))
     .pipe(gulp.dest("css"))

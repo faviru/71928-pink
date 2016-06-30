@@ -2,7 +2,7 @@
 (function() {
 
   var sendFormBtn = document.querySelector('.competition__submit');
-  var acceptionPopUp = document.querySelector('.pop-up__acception');
+  var acceptionPopUp = document.querySelector('.pop-up--acception');
   var acceptionPopUpClose = document.querySelector('.pop-up__btn-wrapper--acception .pop-up__close');
 
   sendFormBtn.addEventListener('click', function(evt) {

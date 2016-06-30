@@ -18,19 +18,7 @@
     justify-content: center;
   }
 
-  .photos__title {
-    @include typography(24px, 30px, 300, $white-text-color);
-    @include container;
-    padding: 97px 0 81px 0;
-    text-align: center;
-  }
-
 @media #{$tablet-widths} {
-  .photos__title {
-    padding: 180px 0 140px 0;
-    font-size: 50px;
-    line-height: 60px;
-  }
 
   .photos__container {
     justify-content: space-between;
@@ -50,9 +38,6 @@
 }
 
 @media #{$desktop-widths} {
-  .photos__title {
-    padding: 173px 0 101px 0;
-  }
 
   .photos__promo {
     margin: 0 300px;
