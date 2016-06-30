@@ -11,7 +11,7 @@
 
 .app-download__wrapper {
   margin: 0 $page-margin-mobile;
-  padding: 26px 0;
+  padding: 28px 0;
   padding-bottom: 30px;
 }
 
@@ -46,7 +46,7 @@
 
 .app-download__app-container {
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 23px;
   text-align: center;
 }
 
@@ -96,6 +96,11 @@
     margin: 0;
   }
 
+  .app-download__wrapper p {
+    margin: 0;
+    font-size: 18px;
+  }
+
   .app-download__title {
     @include typography(40px, 49px, 300, $white-text-color);
     display: block;
@@ -108,7 +113,7 @@
   }
 
   .app-download__app-container {
-    margin-bottom: 33px;
+    margin-bottom: 38px;
   }
 }
 
@@ -128,9 +133,10 @@
 
   .app-download__main {
     margin-bottom: 67px;
+    font-size: 21px;
   }
 
   .app-download__app-container {
-    margin-bottom: 50px;
+    margin-bottom: 55px;
   }
 }

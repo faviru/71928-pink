@@ -32,7 +32,7 @@
 }
 
 .page-footer__socials {
-  margin-top: 35px;
+  margin-top: 40px;
   font-size: 0;
 }
 
@@ -78,6 +78,7 @@
 
   .page-footer__wrapper {
     justify-content: space-between;
+    padding: 31px 0;
   }
 
   .page-footer__socials {
@@ -96,7 +97,7 @@
 
 @media #{$desktop-widths} {
   .page-footer__wrapper {
-    padding: 67px 0;
+    padding: 65px 0;
   }
 
   .page-footer__logo {
@@ -116,7 +117,7 @@
   }
 
   .page-footer__copyright {
-    margin-top: 17px;
+    margin-top: 12px;
   }
 
   .page-footer__copyright p {

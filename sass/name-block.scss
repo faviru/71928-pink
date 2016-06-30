@@ -1,6 +1,6 @@
 .name-block {
   order: 0;
-  padding: 0 0 45px 0;
+  padding: 0 0 38px 0;
 }
 
 .name-block__wrapper {
@@ -36,7 +36,7 @@
 
 @media #{$tablet-widths} {
   .name-block {
-    padding-bottom: 25px;
+    padding-bottom: 22px;
   }
 
   .name-block__item {
