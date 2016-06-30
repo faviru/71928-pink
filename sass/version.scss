@@ -54,7 +54,7 @@
   }
 }
 
-.version__title p {
+.version__price {
   @include typography(24px, 30px, 300, $white-text-color);
   margin: 0;
 }
@@ -101,7 +101,7 @@
 
 .version__toggles {
   background: $light-bg;
-  margin-top: 308px;
+  margin-top: 314px;
 }
 
 #version-input-1:checked ~ .version__list {
@@ -109,7 +109,7 @@
 }
 
 #version-input-2:checked ~ .version__list {
-  left: -543px;
+  left: -544px;
 }
 
 #version-input-3:checked ~ .version__list {

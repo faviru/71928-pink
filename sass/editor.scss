@@ -102,14 +102,14 @@
   height: 2px;
   background-color: $dark-text-color;
   width: 240px;
-  margin-top: 35px;
+  margin-top: 40px;
 }
 
 .editor__toggler {
   position: absolute;
   content: '';
   top: -6px;
-  right: 20px;
+  right: 36px;
   width: 10px;
   height: 10px;
   background-color: $lightest-bg;
@@ -187,6 +187,7 @@
     align-content: space-between;
     height: 400px;
     padding: 55px $page-margin-tablet;
+    padding-top: 58px;
   }
 
   .editor__preview {
@@ -241,7 +242,7 @@
     position: relative;
     order: 0;
     width: 202px;
-    margin: 33px 18px 34px 18px;
+    margin: 30px 18px 37px 18px;
 
     &::after {
       position: absolute;
@@ -281,8 +282,7 @@
   }
 
   .editor__wrapper {
-    padding-left: 80px;
-    padding-right: 60px;
+    padding: 55px 60px 55px 80px;
   }
 
   .editor__tools {
@@ -291,7 +291,7 @@
   }
 
   .editor__toggle {
-    margin: 12px 0 14px 0;
+    margin: 14px 0;
     background-size: auto;
   }
 

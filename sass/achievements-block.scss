@@ -20,7 +20,7 @@
 
 .achievements-block__item {
   width: 100%;
-  margin-top: 41px;
+  margin-top: 42px;
 
   &:first-child {
     label {
@@ -63,7 +63,8 @@
   }
 
   .achievements-block__wrapper {
-    padding: 28px 0;
+    padding-top: 29px;
+    padding-bottom: 0px;
   }
 
   .achievements-block__list {
@@ -85,10 +86,16 @@
     padding-top: 57px;
     padding-bottom: 0;
   }
+
+  .achievements-block__wrapper fieldset {
+    padding-bottom: 44px;
+  }
+
   .achievements-block__item {
     display: inline-block;
     vertical-align: middle;
-    width: 32%;
+    width: 38%;
+    margin-top: 40px;
   }
 
   .achievements-block__list {
