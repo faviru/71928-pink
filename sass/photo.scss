@@ -99,12 +99,10 @@
     right: $page-margin-tablet;
   }
 
-  .photo__wrapper {
-    width: 300px;
-  }
-
   .photo__comment {
     margin: 0;
+    max-height: 50px;
+    overflow: hidden;
   }
 
   .photo__like {
@@ -154,7 +152,7 @@
 
 @media #{$desktop-widths} {
   .photo {
-    margin-top: 50px;
+    margin-top: 52px;
   }
 
   .photo__link img {
@@ -163,7 +161,7 @@
 
   .photo--panorama {
     margin-top: 0;
-    margin-bottom: 4px;
+    margin-bottom: 0;
   }
 
   .photo--panorama .photo__wrapper {
@@ -191,7 +189,7 @@
   }
 
   .photo__like-btn {
-    margin-left: 21px;
-    margin: 0;
+    margin-left: 20px;
+    margin-right: 5px;
   }
 }

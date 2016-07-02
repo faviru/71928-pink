@@ -14,7 +14,7 @@
 <body class="page">
   <div class="page__wrapper">
     <header class="page-header">
-      <div class="page-header__logo-block main-nav main-nav--closed">
+      <div class="page-header__logo-block main-nav">
         <a class="page-header__logo" href="./"></a>
         <button class="main-nav__toggle"></button>
       </div>
@@ -57,7 +57,9 @@
         <section class="achievements-block">
           <div class="achievements-block__wrapper">
             <fieldset class="competition__fieldset">
-              <legend class="competition__legend">Ваши безбашенные достижения в путешествии</legend>
+              <legend class="competition__legend">
+                <div class="competition__legend-wrapper">Ваши безбашенные достижения в путешествии</div>
+              </legend>
               <ul class="achievements-block__list">
                 <li class="achievements-block__item">
                   <input type="checkbox" name="achievements-1" id="achievements-input-1" class="achievements-block__input" checked>
@@ -91,7 +93,9 @@
         <section class="competitor-contacts">
           <div class="competitor-contacts__wrapper">
             <fieldset class="competition__fieldset">
-              <legend class="competition__legend">Контактная информация</legend>
+              <legend class="competition__legend">
+                <div class="competition__legend-wrapper">Контактная информация</div>
+              </legend>
               <ul class="competitor-contacts__list">
                 <li class="competitor-contacts__item competitor-contacts__item--phone">
                   <label for="phone" class="competitor-contacts__item-title">Номерок телефончика</label>
@@ -109,7 +113,9 @@
         <section class="choosen-app">
           <div class="choosen-app__wrapper">
             <fieldset class="competition__fieldset">
-              <legend class="competition__legend">С каким приложением путешествовали?</legend>
+              <legend class="competition__legend">
+                <div class="competition__legend-wrapper">С каким приложением путешествовали?</div>
+              </legend>
               <ul class="choosen-app__list">
                 <li class="choosen-app__item">
                   <input type="radio" name="choosen-app" id="choosen-app-1" class="choosen-app__input" checked>
@@ -131,7 +137,9 @@
         <section class="vacation-review">
           <div class="vacation-review__wrapper">
             <fieldset class="competition__fieldset">
-              <legend class="competition__legend">Опишите свои эмоции</legend>
+              <legend class="competition__legend">
+                <div class="competition__legend-wrapper">Опишите свои эмоции</div>
+              </legend>
               <textarea placeholder="Можно прям в красках, не стесняясь в выражениях" class="vacation-review__input"></textarea>
             </fieldset>
           </div>
@@ -140,7 +148,7 @@
         <section class="competition__send-form">
           <div class="competition__send-form-wrapper">
             <input type="submit" class="competition__submit" value="Отправить форму">
-            <p class="competition__send-note"><sup>*</sup> — обязательные<span>для заполнения</span> поля</p>
+            <p class="competition__send-note"><sup>*</sup> — обязательные<span> для заполнения</span> поля</p>
           </div>
         </section>
       </div>

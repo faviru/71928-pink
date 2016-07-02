@@ -4,6 +4,7 @@
   var navMain = document.getElementsByClassName('main-nav')[0];
   var navBtn = document.getElementsByClassName('main-nav__toggle')[0];
   navMain.classList.remove('main-nav--nojs');
+  navMain.classList.add('main-nav--closed');
 
   navBtn.addEventListener('click', function() {
     if (navMain.classList.contains('main-nav--closed')) {
